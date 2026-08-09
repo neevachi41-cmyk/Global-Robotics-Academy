@@ -1,25 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <header className="nav">
       <div className="nav-inner">
         <div className="logo">
-          <div className="logo-mark">G</div>
-          GLOBAL<br/>ROBOTICS<br/>ACADEMY
+          <Link to="/">
+            <img src="logo.png" alt="Global Robotics Academy" className="logo-image" />
+          </Link>
         </div>
         <nav className="links">
-          <a href="#about">About</a>
-          <a href="#competitions">Competitions</a>
-          <a href="#programs">Programs</a>
-          <a href="#teams">Our Teams</a>
-          <a href="#impact">Our Impact</a>
-          <a href="#partners">Schools &amp; Partners</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#videos">Videos</a>
-          <a href="#contact">Contact</a>
+          <Link to="/about">About</Link>
+          <Link to="/programs">Programs</Link>
+          <Link to="/competitions">Competitions</Link>
+          <Link to="/teams">Our Teams</Link>
+          <Link to="/impact">Our Impact</Link>
+          <Link to="/contact">Contact</Link>
         </nav>
-        <a className="btn" href="#contact">Start Your Journey ↗</a>
+        <Link className="btn" to="/login">Start Your Journey ↗</Link>
       </div>
     </header>
   );

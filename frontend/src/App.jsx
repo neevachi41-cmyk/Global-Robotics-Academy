@@ -12,6 +12,16 @@ import Teams from './components/Teams.jsx';
 import Gallery from './components/Gallery.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
+import About from './pages/About.jsx';
+import CompetitionsPage from './pages/Competitions.jsx';
+import Programs from './pages/Programs.jsx';
+import TeamsPage from './pages/Teams.jsx';
+import Impact from './pages/Impact.jsx';
+import Partners from './pages/Partners.jsx';
+import GalleryPage from './pages/Gallery.jsx';
+import Videos from './pages/Videos.jsx';
+import ContactPage from './pages/Contact.jsx';
+import Login from './pages/Login.jsx';
 
 function App() {
   return (
@@ -33,6 +43,16 @@ function App() {
               <Footer />
             </>
           } />
+          <Route path="/about" element={<About />} />
+          <Route path="/programs" element={<Programs />} />
+          <Route path="/competitions" element={<CompetitionsPage />} />
+          <Route path="/teams" element={<TeamsPage />} />
+          <Route path="/impact" element={<Impact />} />
+          <Route path="/partners" element={<Partners />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/videos" element={<Videos />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/login" element={<Login />} />
           <Route path="*" element={
             <>
               <Hero />

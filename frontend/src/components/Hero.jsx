@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Slideshow from './Slideshow.jsx';
 
 const Hero = () => {
@@ -10,8 +11,8 @@ const Hero = () => {
           <h1>From<br/>Classroom<br/><span className="orange">to<br/>Competition.</span></h1>
           <p className="lede">Global Robotics Academy prepares students for national and international robotics, STEM, AI, coding, innovation and technology competitions.</p>
           <div className="hero-ctas">
-            <a className="btn" href="#contact">Start Your Competition Journey ↗</a>
-            <a className="btn outline" href="#competitions">Explore Competitions</a>
+            <Link className="btn" to="/login">Start Your Competition Journey ↗</Link>
+            <Link className="btn outline" to="/competitions">Explore Competitions</Link>
           </div>
           <div className="tickers">
             <span>Robotics</span><span>AI</span><span>STEM</span><span>Coding</span><span>Innovation</span>
