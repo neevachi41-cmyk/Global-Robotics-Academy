@@ -100,18 +100,15 @@ nav.links a:hover{opacity:1;color:var(--orange);}
 .tickers span:last-child::after{content:"";}
 
 .hero-card{
-  background:var(--mint);border:1px solid var(--mint-line);
-  aspect-ratio:1/1;position:relative;padding:65px;
+  background:var(--ink);border:1px solid var(--mint-line);
+  aspect-ratio:1/1;position:relative;padding:0;
   display:flex;align-items:center;justify-content:center;
-  background-image:
-    linear-gradient(var(--mint-line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--mint-line) 1px, transparent 1px);
-  background-size:28px 28px;
   overflow:hidden;
+  border-radius: 20px;
 }
 .diamond-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;gap:15px;}
 .diamond{
-  width:650px;height:600px;background:var(--ink);
+  width:100%;height:100%;background:var(--ink);
   border-radius: 8px;
   display:flex;align-items:center;justify-content:center;
 }
@@ -375,8 +372,8 @@ h1, h2, h3, h4, h5, h6 {
 /* ---------- SLIDESHOW ---------- */
 .slideshow-container {
   position: relative;
-  width: 650px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
 }
 
 .slideshow-frame {
@@ -395,10 +392,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .stage-outer .diamond {
-  width: 650px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
   background: var(--ink);
-  border-radius: 8px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -432,15 +429,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .slide img {
-  width: 75%;
+  width: 80%;
   height: auto;
+  max-height: 90%;
+  object-fit: contain;
   filter: drop-shadow(0 6px 18px rgba(86, 214, 186, 0.28));
 }
 
 .slide-indicator {
   position: absolute;
   bottom: 10px;
-  right: 10px;
+  left: 10px;
   font-family: var(--font-mono);
   font-size: 10px;
   color: var(--orange);
@@ -449,6 +448,17 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 10;
   pointer-events: none;
   font-weight: 400;
+  align-items: center;
+}
+
+.arena-text-small {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
 }
 
 .iot-label {

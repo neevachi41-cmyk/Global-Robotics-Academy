@@ -1,4 +1,5 @@
 import React from 'react';
+import Slideshow from './Slideshow.jsx';
 
 const Hero = () => {
   return (
@@ -17,10 +18,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="hero-card">
-          <div className="diamond-wrap">
-            <div className="ring"></div>
-            <h3 className="arena-text">build systems that enter the arena</h3>
-          </div>
+          <Slideshow />
         </div>
       </div>
     </section>

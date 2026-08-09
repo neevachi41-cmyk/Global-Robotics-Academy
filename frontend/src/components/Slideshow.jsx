@@ -9,13 +9,13 @@ const Slideshow = () => {
   
   // Robot images for slideshow
   const slidesData = [
-    { id: 'robot_image_1', src: '/robot_image_1.webp', alt: 'Robot' },
-    { id: 'robot_image_2', src: '/robot_image_2.webp', alt: 'Robot' },
-    { id: 'robot_image_3', src: '/robot_image_3.webp', alt: 'Robot' },
-    { id: 'robot_image_4', src: '/robot_image_4.webp', alt: 'Robot' },
-    { id: 'robot_image_5', src: '/robot_image_5.webp', alt: 'Robot' },
-    { id: 'robot_image_6', src: '/robot_image_6.webp', alt: 'Robot' },
-    { id: 'robot_image_7', src: '/robot_image_7.webp', alt: 'Robot' },
+    { id: 'robot_image_1', src: '/robot_image_1.webp', alt: 'Robot Competition 1' },
+    { id: 'robot_image_2', src: '/robot_image_2.webp', alt: 'Robot Competition 2' },
+    { id: 'robot_image_3', src: '/robot_image_3.webp', alt: 'Robot Competition 3' },
+    { id: 'robot_image_4', src: '/robot_image_4.webp', alt: 'Robot Competition 4' },
+    { id: 'robot_image_5', src: '/robot_image_5.webp', alt: 'Robot Competition 5' },
+    { id: 'robot_image_6', src: '/robot_image_6.webp', alt: 'Robot Competition 6' },
+    { id: 'robot_image_7', src: '/robot_image_7.webp', alt: 'Robot Competition 7' },
   ];
 
   const pad = (n) => n < 10 ? '0' + n : '' + n;
@@ -65,8 +65,7 @@ const Slideshow = () => {
           </div>
         </div>
         <div className="slide-indicator">
-          <span id="idxLabel">{pad(current + 1)} / {pad(slidesData.length)}</span>
-          <span id="graNum">{pad(current + 1)}</span>
+          <span className="arena-text-small">BUILD SYSTEMS<br/>THAT ENTER THE ARENA.</span>
         </div>
       </div>
     </div>
