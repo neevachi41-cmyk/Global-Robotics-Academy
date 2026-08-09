@@ -1,17 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import StatsBand from './components/StatsBand';
-import Difference from './components/Difference';
-import Momentum from './components/Momentum';
-import Pathway from './components/Pathway';
-import Competitions from './components/Competitions';
-import Teams from './components/Teams';
-import Gallery from './components/Gallery';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Navbar from './components/Navbar.jsx';
+import Hero from './components/Hero.jsx';
+import StatsBand from './components/StatsBand.jsx';
+import Difference from './components/Difference.jsx';
+import Momentum from './components/Momentum.jsx';
+import Pathway from './components/Pathway.jsx';
+import Competitions from './components/Competitions.jsx';
+import Teams from './components/Teams.jsx';
+import Gallery from './components/Gallery.jsx';
+import Contact from './components/Contact.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
   return (

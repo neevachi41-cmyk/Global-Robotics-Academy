@@ -6,7 +6,7 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "build"
+        "distDir": "dist"
       }
     }
   ],
@@ -32,11 +32,11 @@
     }
   ],
   "env": {
-    "REACT_APP_API_URL": "@react-app-api-url"
+    "VITE_API_URL": "@vite-api-url"
   },
   "build": {
     "env": {
-      "REACT_APP_API_URL": "@react-app-api-url"
+      "VITE_API_URL": "@vite-api-url"
     }
   }
 }
