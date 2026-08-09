@@ -33,6 +33,20 @@ function App() {
               <Footer />
             </>
           } />
+          <Route path="*" element={
+            <>
+              <Hero />
+              <StatsBand />
+              <Difference />
+              <Momentum />
+              <Pathway />
+              <Competitions />
+              <Teams />
+              <Gallery />
+              <Contact />
+              <Footer />
+            </>
+          } />
         </Routes>
       </div>
     </Router>
