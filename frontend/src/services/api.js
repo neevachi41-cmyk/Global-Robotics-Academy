@@ -7,7 +7,19 @@ const api = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
+  timeout: 5000, // Add timeout to prevent hanging requests
 });
+
+// Add response interceptor for better error handling
+api.interceptors.response.use(
+  response => response,
+  error => {
+    if (error.code === 'ECONNABORTED' || error.code === 'ERR_NETWORK') {
+      console.warn('API connection failed - using fallback data');
+    }
+    return Promise.reject(error);
+  }
+);
 
 // Competitions API
 export const competitionsAPI = {
