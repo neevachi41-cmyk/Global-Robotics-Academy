@@ -70,7 +70,7 @@ function IoTModel({ isActive, type, color }) {
             {[0, 1, 2, 3, 4].map((i) => (
               <mesh key={i} position={[-0.5 + i * 0.25, -0.45, 0]}>
                 <cylinderGeometry args={[0.02, 0.02, 0.15, 8]} />
-                <meshStandardMaterial color="#ee5a34" />
+                <meshStandardMaterial color="#0096B9" />
               </mesh>
             ))}
           </group>
@@ -121,7 +121,7 @@ function IoTModel({ isActive, type, color }) {
             {[0, 1, 2, 3].map((i) => (
               <mesh key={i} position={[-0.25 + i * 0.17, 0.4, 0.44]}>
                 <sphereGeometry args={[0.05, 8, 8]} />
-                <meshStandardMaterial color={i % 2 === 0 ? "#0f5e56" : "#ee5a34"} emissive={i % 2 === 0 ? "#0f5e56" : "#ee5a34"} emissiveIntensity={0.8} />
+                <meshStandardMaterial color={i % 2 === 0 ? "#0f5e56" : "#0096B9"} emissive={i % 2 === 0 ? "#0f5e56" : "#0096B9"} emissiveIntensity={0.8} />
               </mesh>
             ))}
             {/* Vents */}
@@ -159,7 +159,7 @@ function IoTModel({ isActive, type, color }) {
             {/* Heart rate sensor */}
             <mesh position={[0, -0.3, 0.05]}>
               <circleGeometry args={[0.08, 16]} />
-              <meshStandardMaterial color="#ee5a34" emissive="#ee5a34" emissiveIntensity={0.5} />
+              <meshStandardMaterial color="#0096B9" emissive="#0096B9" emissiveIntensity={0.5} />
             </mesh>
           </group>
         );
@@ -185,7 +185,7 @@ function IoTModel({ isActive, type, color }) {
             {/* Moisture sensor */}
             <mesh position={[0, -0.6, 0]}>
               <cylinderGeometry args={[0.1, 0.1, 0.3, 8]} />
-              <meshStandardMaterial color="#ee5a34" />
+              <meshStandardMaterial color="#0096B9" />
             </mesh>
             {/* Antenna */}
             <mesh position={[0, 1, 0]}>
@@ -248,11 +248,11 @@ function IoTModel({ isActive, type, color }) {
             {/* Eyes */}
             <mesh position={[-0.1, 0.55, 0.4]}>
               <sphereGeometry args={[0.06, 8, 8]} />
-              <meshStandardMaterial color="#ee5a34" emissive="#ee5a34" emissiveIntensity={1} />
+              <meshStandardMaterial color="#0096B9" emissive="#0096B9" emissiveIntensity={1} />
             </mesh>
             <mesh position={[0.1, 0.55, 0.4]}>
               <sphereGeometry args={[0.06, 8, 8]} />
-              <meshStandardMaterial color="#ee5a34" emissive="#ee5a34" emissiveIntensity={1} />
+              <meshStandardMaterial color="#0096B9" emissive="#0096B9" emissiveIntensity={1} />
             </mesh>
             {/* Arms */}
             <mesh position={[-0.6, 0, 0]} rotation={[0, 0, Math.PI / 4]}>
@@ -360,7 +360,7 @@ function IoTModel({ isActive, type, color }) {
             {/* Core reactor */}
             <mesh position={[0, 0.8, 0.19]}>
               <circleGeometry args={[0.08, 16]} />
-              <meshStandardMaterial color="#ee5a34" emissive="#ee5a34" emissiveIntensity={1} />
+              <meshStandardMaterial color="#0096B9" emissive="#0096B9" emissiveIntensity={1} />
             </mesh>
             {/* Arms */}
             <mesh position={[-0.4, 0.6, 0]} rotation={[0, 0, Math.PI / 8]}>
@@ -443,19 +443,19 @@ function IoTModel({ isActive, type, color }) {
             {/* Engine glow */}
             <mesh position={[-0.7, 0, -0.65]}>
               <sphereGeometry args={[0.1, 8, 8]} />
-              <meshStandardMaterial color="#ee5a34" emissive="#ee5a34" emissiveIntensity={1} />
+              <meshStandardMaterial color="#0096B9" emissive="#0096B9" emissiveIntensity={1} />
             </mesh>
             <mesh position={[0.7, 0, -0.65]}>
               <sphereGeometry args={[0.1, 8, 8]} />
-              <meshStandardMaterial color="#ee5a34" emissive="#ee5a34" emissiveIntensity={1} />
+              <meshStandardMaterial color="#0096B9" emissive="#0096B9" emissiveIntensity={1} />
             </mesh>
             <mesh position={[-0.7, 0, 0.65]}>
               <sphereGeometry args={[0.1, 8, 8]} />
-              <meshStandardMaterial color="#ee5a34" emissive="#ee5a34" emissiveIntensity={1} />
+              <meshStandardMaterial color="#0096B9" emissive="#0096B9" emissiveIntensity={1} />
             </mesh>
             <mesh position={[0.7, 0, 0.65]}>
               <sphereGeometry args={[0.1, 8, 8]} />
-              <meshStandardMaterial color="#ee5a34" emissive="#ee5a34" emissiveIntensity={1} />
+              <meshStandardMaterial color="#0096B9" emissive="#0096B9" emissiveIntensity={1} />
             </mesh>
             {/* Weapons */}
             <mesh position={[-0.6, 0.1, 0]}>
@@ -490,7 +490,7 @@ function IoTModel({ isActive, type, color }) {
 function Loader() {
   return (
     <Html center>
-      <div style={{ color: '#ee5a34', fontFamily: 'IBM Plex Mono', fontSize: '10px' }}>
+      <div style={{ color: 'var(--orange)', fontFamily: 'IBM Plex Mono', fontSize: '10px' }}>
         Loading 3D Model...
       </div>
     </Html>
@@ -507,13 +507,13 @@ const Slideshow3D = () => {
   // IoT device types and colors for different slides
   const iotDevices = [
     { type: 'sensor', color: '#0f5e56', name: 'Smart Sensor' },
-    { type: 'microcontroller', color: '#ee5a34', name: 'Microcontroller' },
+    { type: 'microcontroller', color: '#0096B9', name: 'Microcontroller' },
     { type: 'smartHome', color: '#dcece2', name: 'Smart Home Hub' },
     { type: 'industrial', color: '#6b7178', name: 'Industrial Gateway' },
     { type: 'wearable', color: '#12181c', name: 'Wearable Device' },
     { type: 'agriculture', color: '#bcd8c7', name: 'Agri-Sensor' },
     { type: 'automotive', color: '#f7f6f2', name: 'Automotive IoT' },
-    { type: 'fightingBot', color: '#ee5a34', name: 'Fighting Bot' },
+    { type: 'fightingBot', color: '#0096B9', name: 'Fighting Bot' },
     { type: 'roboticArm', color: '#0f5e56', name: 'Robotic Arm' },
     { type: 'humanoidRobot', color: '#6b7178', name: 'Humanoid Robot' },
     { type: 'droneShip', color: '#dcece2', name: 'Drone Ship' },

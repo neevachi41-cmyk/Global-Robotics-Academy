@@ -1,21 +1,14 @@
 import React from 'react';
 
-const StatsBand = () => {
+const TrainingLoop = () => {
   return (
     <section className="statsband" id="impact">
-      <div className="wrap">
-        <div className="top-row">
-          <div>
-            <div className="big-num">5,000+</div>
-            <div className="cap">Students Trained</div>
-          </div>
-          <div className="scroll-hint">Scroll to Enter the Arena ↓</div>
+      <div className="wrap loop-grid">
+        <div>
+          <p className="eyebrow" style={{ color: '#0096B9' }}>The Training Loop</p>
+          <h2>Robotics is more<br/>than a class.</h2>
+          <p className="lede">At Global Robotics Academy, students move beyond classroom projects and train for real competition environments where engineering, programming, teamwork, strategy, problem-solving and innovation come together.</p>
         </div>
-      </div>
-      <div className="wrap loop-block">
-        <p className="eyebrow">The Training Loop</p>
-        <h2>Robotics is more<br/>than a class.</h2>
-        <p className="lede">Learning robotics is only the beginning. At Global Robotics Academy, students move beyond classroom projects and train for real competition environments where engineering, programming, teamwork, strategy, problem-solving and innovation come together.</p>
         <div className="loop-steps">
           <div className="loop-step"><div className="n">01</div><div className="t">Learn</div></div>
           <div className="loop-step"><div className="n">02</div><div className="t">Build</div></div>
@@ -31,4 +24,4 @@ const StatsBand = () => {
   );
 };
 
-export default StatsBand;
+export default TrainingLoop;

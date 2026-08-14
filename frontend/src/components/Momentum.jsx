@@ -13,13 +13,6 @@ const Momentum = () => {
         </div>
         <div className="ghost-word">GRA</div>
       </div>
-      <div className="partner-band" id="partners">
-        <div className="wrap">
-          <p className="eyebrow">For Schools &amp; Institutions</p>
-          <h2>Build a Competition-Ready<br/><span className="teal">Robotics Culture.</span></h2>
-          <a className="btn" href="#contact">Partner With Us ↗</a>
-        </div>
-      </div>
     </section>
   );
 };

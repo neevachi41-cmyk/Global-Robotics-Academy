@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import './index.css';
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
-import StatsBand from './components/StatsBand.jsx';
+import TrainingLoop from './components/TrainingLoop.jsx';
+import MomentumStats from './components/MomentumStats.jsx';
 import Difference from './components/Difference.jsx';
-import Momentum from './components/Momentum.jsx';
+import PartnerBand from './components/PartnerBand.jsx';
 import Pathway from './components/Pathway.jsx';
 import Competitions from './components/Competitions.jsx';
 import Teams from './components/Teams.jsx';
@@ -43,9 +44,10 @@ function App() {
           <Route path="/" element={
             <>
               <Hero />
-              <StatsBand />
+              <TrainingLoop />
+              <MomentumStats />
               <Difference />
-              <Momentum />
+              <PartnerBand />
               <Pathway />
               <Competitions />
               <Teams />
@@ -67,9 +69,10 @@ function App() {
           <Route path="*" element={
             <>
               <Hero />
-              <StatsBand />
+              <TrainingLoop />
+              <MomentumStats />
               <Difference />
-              <Momentum />
+              <PartnerBand />
               <Pathway />
               <Competitions />
               <Teams />
