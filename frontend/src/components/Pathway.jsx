@@ -55,10 +55,6 @@ const Pathway = () => {
             </div>
           </div>
         </div>
-
-        <div className="footer-line">
-          <span className="destination">08 / REPRESENT</span>
-        </div>
       </div>
     </section>
   );

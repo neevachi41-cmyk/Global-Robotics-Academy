@@ -642,26 +642,6 @@ nav.links a:hover::after{width:100%;}
   border-color:var(--teal);
 }
 
-/* bottom message */
-.pathway-section .footer-line{
-  display:flex;
-  justify-content:flex-end;
-  align-items:center;
-  border-top:1px solid var(--line);
-  padding-top:17px;
-  margin-top:5px;
-  color:#8b969d;
-  font-family:var(--font-heading);
-  font-size:13px;
-  font-weight:600;
-  letter-spacing:1.5px;
-  text-transform:uppercase;
-}
-
-.pathway-section .footer-line .destination{
-  color:var(--teal);
-}
-
 /* ===== ANIMATION ===== */
 @keyframes drawRail{
   0%{transform:scaleX(0);opacity:0}
