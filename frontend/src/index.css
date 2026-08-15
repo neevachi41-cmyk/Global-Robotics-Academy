@@ -775,7 +775,7 @@ nav.links a:hover::after{width:100%;}
 .contact h1{font-size:48px;font-weight:700;}
 .contact .lede{max-width:520px;color:#4b5157;font-size:22px;line-height:1.6;margin-top:22px;font-family:var(--font-body);}
 .contact-info{margin-top:32px;display:flex;flex-direction:column;gap:12px;}
-.contact-info a{font-family:var(--font-mono);font-size:18px;color:var(--teal);text-transform:uppercase;letter-spacing:.06em;font-weight:400;}
+.contact-info a{font-family:var(--font-mono);font-size:18px;color:var(--orange);text-transform:uppercase;letter-spacing:.06em;font-weight:400;}
 .contact-info a.wa{color:var(--orange);}
 
 .form-card{
@@ -807,7 +807,7 @@ footer{border-top:1px solid var(--line);padding:70px 0 40px;}
 .footer-col .eyebrow{color:var(--teal);margin-bottom:16px;display:block;font-size:18px;font-weight:700;}
 .footer-col a{display:block;font-size:18px;color:#4b5157;margin-bottom:12px;font-weight:400;font-family:var(--font-body);}
 .footer-col a:hover{color:var(--orange);}
-.footer-right{text-align:right;color:var(--gray);font-size:18px;font-family:var(--font-body);}
+.footer-right{text-align:right;color:var(--orange);font-size:18px;font-family:var(--font-body);}
 .footer-right p{margin:0 0 12px;}
 .footer-bottom{margin-top:50px;padding-top:20px;border-top:1px solid var(--line);text-align:center;font-family:var(--font-mono);font-size:18px;color:var(--gray);letter-spacing:.06em;text-transform:uppercase;font-weight:400;}
 
