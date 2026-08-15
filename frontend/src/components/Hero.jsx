@@ -14,9 +14,6 @@ const Hero = () => {
             <Link className="btn" to="/login">Start Your Competition Journey ↗</Link>
             <Link className="btn outline" to="/competitions">Explore Competitions</Link>
           </div>
-          <div className="tickers">
-            <span>Robotics</span><span>AI</span><span>STEM</span><span>Coding</span><span>Innovation</span>
-          </div>
         </div>
         <div className="hero-card">
           <Slideshow />
