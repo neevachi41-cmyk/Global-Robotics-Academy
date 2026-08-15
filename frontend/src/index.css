@@ -97,7 +97,7 @@ nav.links a:hover::after{width:100%;}
 /* ---------- HERO ---------- */
 .hero{padding:90px 0 70px;background:var(--cream);}
 .hero-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:60px;align-items:start;}
-.hero h1{font-size:27px;font-weight:700;}
+.hero h1{font-size:48px;font-weight:700;}
 .hero p.lede{
   margin-top:26px;max-width:520px;color:#4b5157;font-size:18px;line-height:1.6;
   font-family:var(--font-body);
@@ -145,7 +145,7 @@ nav.links a:hover::after{width:100%;}
 .momentum-stats-section{padding:90px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
 .momentum-stats-section .top-row{display:flex;justify-content:space-between;align-items:center;gap:60px;}
 .momentum-stats-section .eyebrow{margin-bottom:12px;margin-top:0;}
-.momentum-stats-section h2{font-size:27px;max-width:820px;font-weight:700;}
+.momentum-stats-section h2{font-size:48px;max-width:820px;font-weight:700;}
 .momentum-stats-section .stats-grid{display:flex;gap:60px;}
 .momentum-stats-section .big-num{font-family:var(--font-heading);font-size:32px;font-weight:700;}
 .momentum-stats-section .cap{font-family:var(--font-mono);font-size:18px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);margin-top:6px;font-weight:400;}
@@ -154,7 +154,7 @@ nav.links a:hover::after{width:100%;}
 .scroll-hint{font-family:var(--font-mono);font-size:16px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);display:flex;align-items:center;gap:8px;font-weight:400;}
 
 .loop-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:70px;}
-.loop-grid h2{font-size:27px;max-width:820px;font-weight:700;margin-top:12px;}
+.loop-grid h2{font-size:48px;max-width:820px;font-weight:700;margin-top:12px;}
 .loop-grid p.lede{max-width:680px;color:#4b5157;font-size:18px;line-height:1.65;margin-top:24px;font-family:var(--font-body);}
 
 .loop-steps{
@@ -327,7 +327,7 @@ nav.links a:hover::after{width:100%;}
 /* ---------- DIFFERENCE GRID ---------- */
 .difference{padding:90px 0;}
 .diff-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:70px;}
-.diff-grid h2{font-size:27px;font-weight:700;}
+.diff-grid h2{font-size:48px;font-weight:700;}
 .diff-grid p.lede{margin-top:22px;color:#4b5157;font-size:18px;font-family:var(--font-body);}
 .diff-cards{
   border:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;
@@ -345,7 +345,7 @@ nav.links a:hover::after{width:100%;}
 /* ---------- MOMENTUM (mint) ---------- */
 .momentum{background:var(--mint);padding:80px 0 0;overflow:hidden;position:relative;}
 .momentum-inner{position:relative;padding-bottom:80px;}
-.momentum h2{font-size:27px;font-weight:700;}
+.momentum h2{font-size:48px;font-weight:700;}
 .momentum .accent{color:var(--orange);}
 .momentum-stats{display:flex;gap:60px;margin-top:34px;padding-top:22px;border-top:1px solid rgba(15,94,86,.25);max-width:600px;}
 .momentum-stats .num{font-family:var(--font-heading);color:var(--teal);font-size:28px;font-weight:700;}
@@ -357,7 +357,7 @@ nav.links a:hover::after{width:100%;}
 }
 .partner-band{padding:70px 0;border-top:1px solid var(--mint-line);}
 .partner-band .eyebrow{color:var(--teal);font-size:18px;font-weight:700;}
-.partner-band h2{font-size:27px;margin-top:14px;font-weight:700;}
+.partner-band h2{font-size:48px;margin-top:14px;font-weight:700;}
 .partner-band .btn{margin-top:26px;font-size:18px;}
 
 /* ---------- PATHWAY ---------- */
@@ -395,7 +395,7 @@ nav.links a:hover::after{width:100%;}
   margin:0;
   max-width:760px;
   font-family:var(--font-heading);
-  font-size:27px;
+  font-size:48px;
   line-height:.82;
   letter-spacing:-1.5px;
   text-transform:uppercase;
@@ -668,7 +668,7 @@ nav.links a:hover::after{width:100%;}
 
 /* Legacy pathway styles for other components */
 .pathway{padding:90px 0 40px;}
-.pathway h2{font-size:27px;max-width:800px;font-weight:700;}
+.pathway h2{font-size:48px;max-width:800px;font-weight:700;}
 .path-grid{
   display:grid;grid-template-columns:repeat(3,1fr);
   border-top:1px solid var(--line);margin-top:56px;
@@ -694,7 +694,7 @@ nav.links a:hover::after{width:100%;}
 
 /* ---------- COMPETITIONS ---------- */
 .competitions{padding:90px 0;}
-.competitions h2{font-size:27px;max-width:820px;font-weight:700;}
+.competitions h2{font-size:48px;max-width:820px;font-weight:700;}
 .competitions .lede{max-width:680px;color:#4b5157;font-size:18px;line-height:1.65;margin-top:24px;font-family:var(--font-body);}
 .comp-grid{
   display:grid;grid-template-columns:repeat(4,1fr);gap:0;
@@ -722,7 +722,7 @@ nav.links a:hover::after{width:100%;}
 /* ---------- TEAMS ---------- */
 .teams{padding:90px 0;}
 .teams-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:70px;}
-.teams h2{font-size:27px;font-weight:700;}
+.teams h2{font-size:48px;font-weight:700;}
 .teams .lede{max-width:520px;color:#4b5157;font-size:18px;line-height:1.6;margin-top:22px;font-family:var(--font-body);}
 .team-list{margin-top:40px;}
 .team-row{
@@ -737,7 +737,7 @@ nav.links a:hover::after{width:100%;}
 /* ---------- GALLERY ---------- */
 .gallery{padding:90px 0;}
 .gallery-top{display:flex;justify-content:space-between;align-items:start;margin-bottom:40px;}
-.gallery h2{font-size:27px;max-width:680px;font-weight:700;}
+.gallery h2{font-size:48px;max-width:680px;font-weight:700;}
 .gallery .lede{max-width:520px;color:#4b5157;font-size:18px;line-height:1.6;margin-top:22px;font-family:var(--font-body);}
 .gallery-link{
   font-family:var(--font-mono);font-size:18px;color:var(--teal);
@@ -772,7 +772,7 @@ nav.links a:hover::after{width:100%;}
 /* ---------- CONTACT ---------- */
 .contact{padding:90px 0;}
 .contact-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:70px;}
-.contact h1{font-size:27px;font-weight:700;}
+.contact h1{font-size:48px;font-weight:700;}
 .contact .lede{max-width:520px;color:#4b5157;font-size:22px;line-height:1.6;margin-top:22px;font-family:var(--font-body);}
 .contact-info{margin-top:32px;display:flex;flex-direction:column;gap:12px;}
 .contact-info a{font-family:var(--font-mono);font-size:18px;color:var(--teal);text-transform:uppercase;letter-spacing:.06em;font-weight:400;}
@@ -862,7 +862,7 @@ footer{border-top:1px solid var(--line);padding:70px 0 40px;}
   .footer-grid{grid-template-columns:1fr;}
   .footer-right{text-align:left;}
   .ghost-word{display:none;}
-  .momentum h2, .pathway h2, .competitions h2, .loop-grid h2, .momentum-stats-section h2{font-size:27px;}
+  .momentum h2, .pathway h2, .competitions h2, .loop-grid h2, .momentum-stats-section h2{font-size:48px;}
   .momentum-stats-section .top-row{flex-direction:column;align-items:flex-start;gap:30px;}
   .momentum-stats-section .stats-grid{flex-direction:column;gap:20px;}
   .momentum-stats-section .eyebrow{margin-bottom:8px;margin-top:0;}
