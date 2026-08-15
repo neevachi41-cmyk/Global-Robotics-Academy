@@ -759,7 +759,7 @@ nav.links a:hover::after{width:100%;}
 .gallery-body h4{font-family:var(--font-heading);font-size:27px;text-transform:uppercase;margin:0 0 8px;line-height:1.2;font-weight:700;}
 .gallery-body p{color:#5a6067;font-size:18px;line-height:1.5;margin:0 0 12px;font-family:var(--font-body);}
 .gallery-body .cat{
-  display:inline-block;background:var(--mint);color:var(--teal);
+  display:inline-block;background:var(--mint);color:var(--orange);
   font-family:var(--font-mono);font-size:18px;padding:4px 8px;
   text-transform:uppercase;letter-spacing:.06em;font-weight:400;
 }
