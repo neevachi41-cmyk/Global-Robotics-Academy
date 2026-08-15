@@ -356,7 +356,7 @@ nav.links a:hover::after{width:100%;}
   line-height:1;white-space:nowrap;pointer-events:none;
 }
 .partner-band{padding:70px 0;border-top:1px solid var(--mint-line);}
-.partner-band .eyebrow{color:var(--teal);font-size:18px;font-weight:700;}
+.partner-band .eyebrow{color:var(--orange);font-size:18px;font-weight:700;}
 .partner-band h2{font-size:48px;margin-top:14px;font-weight:700;}
 .partner-band .btn{margin-top:26px;font-size:18px;}
 
