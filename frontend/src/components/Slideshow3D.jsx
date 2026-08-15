@@ -29,7 +29,7 @@ function IoTModel({ isActive, type, color }) {
             {/* Sensor dome */}
             <mesh position={[0, 0.2, 0]}>
               <sphereGeometry args={[0.4, 16, 16]} />
-              <meshStandardMaterial color="#dcece2" transparent opacity={0.7} />
+              <meshStandardMaterial color="#E1F5FE" transparent opacity={0.7} />
             </mesh>
             {/* LED indicators */}
             {[0, 1, 2].map((i) => (
@@ -93,7 +93,7 @@ function IoTModel({ isActive, type, color }) {
             {[0, 1, 2].map((i) => (
               <mesh key={i} position={[-0.2 + i * 0.2, -0.3, 0.16]}>
                 <circleGeometry args={[0.08, 16]} />
-                <meshStandardMaterial color="#dcece2" />
+                <meshStandardMaterial color="#E1F5FE" />
               </mesh>
             ))}
             {/* WiFi indicator */}
@@ -508,15 +508,15 @@ const Slideshow3D = () => {
   const iotDevices = [
     { type: 'sensor', color: '#00FFFF', name: 'Smart Sensor' },
     { type: 'microcontroller', color: '#0096B9', name: 'Microcontroller' },
-    { type: 'smartHome', color: '#dcece2', name: 'Smart Home Hub' },
+    { type: 'smartHome', color: '#E1F5FE', name: 'Smart Home Hub' },
     { type: 'industrial', color: '#6b7178', name: 'Industrial Gateway' },
     { type: 'wearable', color: '#12181c', name: 'Wearable Device' },
-    { type: 'agriculture', color: '#bcd8c7', name: 'Agri-Sensor' },
+    { type: 'agriculture', color: '#B3E5FC', name: 'Agri-Sensor' },
     { type: 'automotive', color: '#f7f6f2', name: 'Automotive IoT' },
     { type: 'fightingBot', color: '#0096B9', name: 'Fighting Bot' },
     { type: 'roboticArm', color: '#00FFFF', name: 'Robotic Arm' },
     { type: 'humanoidRobot', color: '#6b7178', name: 'Humanoid Robot' },
-    { type: 'droneShip', color: '#dcece2', name: 'Drone Ship' },
+    { type: 'droneShip', color: '#E1F5FE', name: 'Drone Ship' },
   ];
 
   const pad = (n) => n < 10 ? '0' + n : '' + n;
