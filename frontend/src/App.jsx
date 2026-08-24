@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import './index.css';
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
-import TrainingLoop from './components/TrainingLoop.jsx';
 import MomentumStats from './components/MomentumStats.jsx';
 import Difference from './components/Difference.jsx';
 import PartnerBand from './components/PartnerBand.jsx';
@@ -23,6 +22,7 @@ import GalleryPage from './pages/Gallery.jsx';
 import Videos from './pages/Videos.jsx';
 import ContactPage from './pages/Contact.jsx';
 import Login from './pages/Login.jsx';
+import Signup from './pages/Signup.jsx';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -44,7 +44,6 @@ function App() {
           <Route path="/" element={
             <>
               <Hero />
-              <TrainingLoop />
               <MomentumStats />
               <Difference />
               <PartnerBand />
@@ -66,10 +65,10 @@ function App() {
           <Route path="/videos" element={<Videos />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="*" element={
             <>
               <Hero />
-              <TrainingLoop />
               <MomentumStats />
               <Difference />
               <PartnerBand />

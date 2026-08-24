@@ -10,6 +10,11 @@ const Footer = () => {
             GLOBAL<br/>ROBOTICS<br/>ACADEMY
           </div>
           <p className="footer-tag">Build. Innovate. Compete. Go Global.</p>
+          <div className="footer-contact">
+            <p className="contact-item">+91 9922552891</p>
+            <p className="contact-item">gra.stemsage@gmail.com</p>
+            <p className="contact-item">Mumbai, India</p>
+          </div>
         </div>
         <div className="footer-col">
           <span className="eyebrow">Explore</span>
@@ -26,14 +31,9 @@ const Footer = () => {
           <a href="#videos">Videos</a>
           <a href="#contact">Contact</a>
         </div>
-        <div className="footer-right">
-          <p>+91 9922552891</p>
-          <p>gra.stemsage@gmail.com</p>
-          <p>Mumbai, India</p>
-        </div>
       </div>
       <div className="wrap footer-bottom">
-        © 2024 Global Robotics Academy. All rights reserved.
+        © 2024 GLOBAL ROBOTICS ACADEMY. ALL RIGHTS RESERVED.
       </div>
     </footer>
   );

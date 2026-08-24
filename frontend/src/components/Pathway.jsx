@@ -15,8 +15,6 @@ const Pathway = () => {
   return (
     <section className="pathway-section">
       <div className="pathway-container">
-        <div className="eyebrow">THE PATHWAY</div>
-        
         <div className="hero">
           <h1>FROM FIRST BUILD<br/>TO COMPETITION DAY.</h1>
           <p className="hero-copy">
