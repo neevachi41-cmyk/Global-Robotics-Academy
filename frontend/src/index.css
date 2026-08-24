@@ -914,6 +914,40 @@ footer{border-top:1px solid var(--line);padding:70px 0 40px;max-width:1400px;mar
   }
 }
 
+/* Mobile specific styles */
+@media(max-width:768px){
+  .wrap{padding:0 16px;}
+  .nav-inner{padding:0 16px;}
+  .hero h1{font-size:28px;}
+  .hero p.lede{font-size:16px;}
+  .eyebrow{font-size:14px;}
+  .competitions h2, .teams h2, .gallery h2, .contact h1{font-size:28px;}
+  .comp-grid{grid-template-columns:1fr;}
+  .comp-card{padding:20px 16px;}
+  .comp-card h4{font-size:20px;}
+  .comp-card p{font-size:14px;}
+  .comp-card .tag{font-size:14px;}
+  .footer-grid{gap:24px;}
+  .footer-logo{font-size:14px;}
+  .footer-tag{font-size:14px;}
+  .footer-contact .contact-item{font-size:14px;}
+  .footer-col .eyebrow{font-size:14px;}
+  .footer-col a{font-size:14px;}
+  .form-card{padding:16px;}
+  .field label{font-size:12px;}
+  .field input, .field select, .field textarea{font-size:16px;}
+  .login-container{padding:30px 20px;margin:30px 16px;}
+  .login-header h1{font-size:22px;}
+  .login-header .lede{font-size:14px;}
+  .pathway-section{padding:30px 0 60px 0;}
+  .pathway-section .hero h1{font-size:28px;}
+  .pathway-section .hero-copy{font-size:14px;}
+  .loop-steps{grid-template-columns:1fr;}
+  .diff-card{padding:20px 16px;}
+  .diff-card h4{font-size:20px;}
+  .diff-card p{font-size:14px;}
+}
+
 /* ---------- FONT OPTIMIZATIONS ---------- */
 /* Improve font rendering across different browsers */
 /* Google Fonts are loaded via HTML with font-display: swap */
