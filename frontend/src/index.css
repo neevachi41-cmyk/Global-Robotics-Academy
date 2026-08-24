@@ -912,6 +912,25 @@ footer{border-top:1px solid var(--line);padding:70px 0 40px;max-width:1400px;mar
   .pathway-section .path{
     width:1180px;
   }
+  .pathway-section .steps{
+    gap:16px;
+  }
+  .pathway-section .card{
+    height:120px;
+    padding:12px 14px;
+  }
+  .pathway-section .step:nth-child(odd) .card{
+    bottom:calc(50% + 70px);
+  }
+  .pathway-section .step:nth-child(even) .card{
+    top:calc(50% + 70px);
+  }
+  .pathway-section .step:nth-child(odd) .connector{
+    height:41px;
+  }
+  .pathway-section .step:nth-child(even) .connector{
+    height:41px;
+  }
 }
 
 /* Mobile specific styles */
@@ -942,6 +961,64 @@ footer{border-top:1px solid var(--line);padding:70px 0 40px;max-width:1400px;mar
   .pathway-section{padding:30px 0 60px 0;}
   .pathway-section .hero h1{font-size:28px;}
   .pathway-section .hero-copy{font-size:14px;}
+  .pathway-section .path-scroll{
+    overflow-x:auto;
+    overflow-y:visible;
+    padding-bottom:20px;
+    -webkit-overflow-scrolling:touch;
+  }
+  .pathway-section .path{
+    width:100%;
+    min-width:800px;
+    height:350px;
+  }
+  .pathway-section .step{
+    height:350px;
+  }
+  .pathway-section .card{
+    height:100px;
+    padding:10px 12px;
+  }
+  .pathway-section .card h2{
+    font-size:14px;
+  }
+  .pathway-section .card p{
+    font-size:10px;
+    line-height:1.2;
+  }
+  .pathway-section .meta{
+    margin-bottom:4px;
+  }
+  .pathway-section .number{
+    font-size:12px;
+  }
+  .pathway-section .phase{
+    font-size:9px;
+  }
+  .pathway-section .step:nth-child(odd) .card{
+    bottom:calc(50% + 60px);
+  }
+  .pathway-section .step:nth-child(even) .card{
+    top:calc(50% + 60px);
+  }
+  .pathway-section .step:nth-child(odd) .connector{
+    height:31px;
+  }
+  .pathway-section .step:nth-child(even) .connector{
+    height:31px;
+  }
+  .pathway-section .node{
+    width:40px;
+    height:40px;
+  }
+  .pathway-section .node::before{
+    width:14px;
+    height:14px;
+  }
+  .pathway-section .node::after{
+    width:4px;
+    height:4px;
+  }
   .loop-steps{grid-template-columns:1fr;}
   .diff-card{padding:20px 16px;}
   .diff-card h4{font-size:20px;}
