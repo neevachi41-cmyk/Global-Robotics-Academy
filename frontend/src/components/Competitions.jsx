@@ -3,6 +3,7 @@ import { competitionsAPI } from '../services/api';
 
 const Competitions = () => {
   const [competitions, setCompetitions] = useState([]);
+  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
     fetchCompetitions();
@@ -31,22 +32,48 @@ const Competitions = () => {
   return (
     <section className="competitions" id="competitions">
       <div className="wrap">
-        <p className="eyebrow">Competition Directory</p>
-        <h2>Prepare for the Competitions That Matter.</h2>
-        <p className="lede">Competition availability, eligibility and participation depend on the respective competition's rules, age categories, selection process and registration requirements.</p>
-
-        <div className="comp-grid">
-          {competitions.map((competition, index) => (
-            <div className="comp-card" key={index}>
-              <div className="n">0{index + 1}</div>
-              <span className="trophy">🏆</span>
-              <h4>{competition.name}</h4>
-              <p>{competition.description}</p>
-              <span className="tag">{competition.category}</span>
+        <div className="competitions-layout">
+          <div className="competitions-text">
+            <p className="eyebrow">Competition Directory</p>
+            <h2>Prepare for the Competitions That Matter.</h2>
+            <p className="lede">Competition availability, eligibility and participation depend on the respective competition's rules, age categories, selection process and registration requirements.</p>
+            
+            <div className="competition-stats">
+              <div className="stat-item">
+                <div className="stat-number">50+</div>
+                <div className="stat-label">Teams Mentored</div>
+              </div>
+              <div className="stat-item">
+                <div className="stat-number">15+</div>
+                <div className="stat-label">National Wins</div>
+              </div>
+              <div className="stat-item">
+                <div className="stat-number">8+</div>
+                <div className="stat-label">International Stages</div>
+              </div>
             </div>
-          ))}
+            
+            <a className="comp-link" href="#contact">Prepare for a Competition ↗</a>
+          </div>
+          <div className="competitions-grid">
+            <div className="comp-grid">
+              {competitions.slice(0, showAll ? competitions.length : 4).map((competition, index) => (
+                <div className="comp-card" key={index}>
+                  <div className="n">0{index + 1}</div>
+                  <span className="trophy">🏆</span>
+                  <h4>{competition.name}</h4>
+                  <p>{competition.description}</p>
+                  <span className="tag">{competition.category}</span>
+                </div>
+              ))}
+            </div>
+            {!showAll && competitions.length > 4 && (
+              <button className="see-more-btn" onClick={() => setShowAll(true)}>
+                See More
+              </button>
+            )}
+          </div>
         </div>
-        <a className="comp-link" href="#contact">Prepare for a Competition ↗</a>
       </div>
     </section>
   );

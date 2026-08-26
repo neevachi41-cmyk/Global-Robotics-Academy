@@ -6,8 +6,7 @@ const Footer = () => {
       <div className="wrap footer-grid">
         <div>
           <div className="footer-logo">
-            <div className="logo-mark">G</div>
-            GLOBAL<br/>ROBOTICS<br/>ACADEMY
+            <img src="logo.png" alt="Global Robotics Academy" className="logo-image" />
           </div>
           <p className="footer-tag">Build. Innovate. Compete. Go Global.</p>
           <div className="footer-contact">

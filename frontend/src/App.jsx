@@ -23,6 +23,7 @@ import Videos from './pages/Videos.jsx';
 import ContactPage from './pages/Contact.jsx';
 import Login from './pages/Login.jsx';
 import Signup from './pages/Signup.jsx';
+import TeamForm from './pages/TeamForm.jsx';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -44,10 +45,10 @@ function App() {
           <Route path="/" element={
             <>
               <Hero />
+              <Pathway />
               <MomentumStats />
               <Difference />
               <PartnerBand />
-              <Pathway />
               <Competitions />
               <Teams />
               <Gallery />
@@ -66,13 +67,14 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/team-form" element={<TeamForm />} />
           <Route path="*" element={
             <>
               <Hero />
+              <Pathway />
               <MomentumStats />
               <Difference />
               <PartnerBand />
-              <Pathway />
               <Competitions />
               <Teams />
               <Gallery />

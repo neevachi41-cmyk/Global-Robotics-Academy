@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Footer from '../components/Footer.jsx';
 
 const Signup = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -23,7 +25,12 @@ const Signup = () => {
       return;
     }
     console.log('Signup attempt:', formData);
-    // Add your signup logic here
+    // Set authentication state
+    localStorage.setItem('isAuthenticated', 'true');
+    localStorage.setItem('userEmail', formData.email);
+    localStorage.setItem('userName', formData.name);
+    // Redirect to home page
+    navigate('/');
   };
 
   return (
@@ -101,7 +108,10 @@ const Signup = () => {
             </button>
             
             <div className="signup-link">
-              <p>Already have an account? <a href="/login">Sign in</a></p>
+              <p>Already have an account? <a href="/login" onClick={(e) => {
+                e.preventDefault();
+                navigate('/login');
+              }}>Sign in</a></p>
             </div>
           </form>
         </div>

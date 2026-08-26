@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Footer from '../components/Footer.jsx';
 
 const Login = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -17,7 +19,11 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Login attempt:', formData);
-    // Add your login logic here
+    // Set authentication state
+    localStorage.setItem('isAuthenticated', 'true');
+    localStorage.setItem('userEmail', formData.email);
+    // Redirect to home page
+    navigate('/');
   };
 
   return (
@@ -62,7 +68,7 @@ const Login = () => {
                 <input type="checkbox" />
                 <span>Remember me</span>
               </label>
-              <a href="/forgot-password" className="forgot-link">Forgot password?</a>
+              <span className="forgot-link">Forgot password?</span>
             </div>
             
             <button type="submit" className="btn login-btn">
@@ -70,7 +76,10 @@ const Login = () => {
             </button>
             
             <div className="signup-link">
-              <p>Don't have an account? <a href="/signup">Create one</a></p>
+              <p>Don't have an account? <a href="/signup" onClick={(e) => {
+                e.preventDefault();
+                navigate('/signup');
+              }}>Create one</a></p>
             </div>
           </form>
         </div>
