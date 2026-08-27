@@ -374,9 +374,9 @@
 }
 
 .team-card:hover .team-image {
-  transform: scale(1.1);
+  transform: scale(1.05);
 
-  filter: brightness(0.82);
+  filter: brightness(0.9);
 }
 
 /* Image overlay */
