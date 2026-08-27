@@ -21,12 +21,6 @@ const Hero = () => {
             <Link className="btn" to="/login">Start Your Competition Journey ↗</Link>
             <Link className="btn outline" to="/competitions">Explore Competitions</Link>
           </div>
-          
-          {/* Decorative dotted path */}
-          <div className="dotted-path hero-dotted-path">
-            <div className="path-dot"></div>
-            <div className="path-arrow">➜</div>
-          </div>
         </div>
         <div className="hero-card">
           <Slideshow />
