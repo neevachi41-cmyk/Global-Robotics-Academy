@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="bg-circle hero-circle-two"></div>
       
       <div className="wrap hero-grid">
-        <div className="hero-content">
+        <div className="hero-content hero-intro">
           <div className="section-label">
             NATIONAL & INTERNATIONAL COMPETITION PREPARATION
             <span></span>
