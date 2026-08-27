@@ -5,10 +5,40 @@ import './TeamSection.css';
 
 const TeamSection = ({ showAll = false }) => {
   const [teams, setTeams] = useState([]);
+  const [visibleCards, setVisibleCards] = useState(new Set());
 
   useEffect(() => {
     fetchTeams();
   }, []);
+
+  useEffect(() => {
+    if (teams.length > 0) {
+      setupScrollAnimation();
+    }
+  }, [teams]);
+
+  const setupScrollAnimation = () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = parseInt(entry.target.dataset.index);
+            setTimeout(() => {
+              setVisibleCards((prev) => new Set([...prev, index]));
+            }, index * 100);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll('.team-card').forEach((card) => {
+      observer.observe(card);
+    });
+
+    return () => observer.disconnect();
+  };
 
   const fetchTeams = async () => {
     try {
@@ -121,11 +151,11 @@ const TeamSection = ({ showAll = false }) => {
 
           {displayTeams.map((team, index) => (
             <div
-              className="team-card"
+              className={`team-card ${visibleCards.has(index) ? 'visible' : ''}`}
               key={team.id || index}
+              data-index={index}
               style={{
                 "--team-color": team.color,
-                "--delay": `${index * 0.12}s`,
               }}
             >
 
