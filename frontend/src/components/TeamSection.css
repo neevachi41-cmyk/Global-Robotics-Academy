@@ -87,6 +87,8 @@
 .teams-intro {
   position: relative;
   animation: introReveal 1s ease forwards;
+  transform: translateZ(0);
+  will-change: opacity;
 }
 
 .section-label {
