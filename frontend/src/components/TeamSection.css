@@ -1,0 +1,721 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Space+Mono:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.teams-section {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #f8f8f5;
+  padding: 80px 7%;
+  font-family: Arial, sans-serif;
+}
+
+/* ================================
+   BACKGROUND
+================================ */
+
+.teams-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    radial-gradient(
+      rgba(0, 170, 215, 0.08) 1px,
+      transparent 1px
+    );
+
+  background-size: 35px 35px;
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.circle-one {
+  width: 300px;
+  height: 300px;
+  left: -180px;
+  bottom: -100px;
+
+  border: 1px solid rgba(0, 170, 215, 0.15);
+
+  animation: floatingCircle 7s ease-in-out infinite;
+}
+
+.circle-two {
+  width: 100px;
+  height: 100px;
+  right: 5%;
+  top: 15%;
+
+  border: 1px solid rgba(0, 170, 215, 0.12);
+
+  animation: floatingCircle 5s ease-in-out infinite reverse;
+}
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+
+.teams-container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1400px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 0.72fr 1.7fr;
+  gap: 70px;
+
+  align-items: center;
+}
+
+/* ================================
+   LEFT SIDE
+================================ */
+
+.teams-intro {
+  position: relative;
+  animation: introReveal 1s ease forwards;
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  margin-bottom: 20px;
+
+  color: #009bc5;
+
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.section-label span {
+  display: block;
+  width: 38px;
+  height: 2px;
+
+  background: #009bc5;
+}
+
+.teams-intro h2 {
+  margin: 0;
+
+  color: #101820;
+
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(48px, 4vw, 68px);
+
+  line-height: 0.95;
+  font-weight: 800;
+
+  letter-spacing: -1px;
+}
+
+.teams-intro h2 span {
+  color: #069fc8;
+
+  position: relative;
+}
+
+.teams-intro h2 span:last-child::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -12px;
+
+  width: 100%;
+  height: 3px;
+
+  background: #069fc8;
+
+  transform-origin: left;
+
+  animation: lineReveal 1.2s ease 0.7s both;
+}
+
+.teams-intro p {
+  max-width: 440px;
+
+  margin-top: 35px;
+  margin-bottom: 28px;
+
+  color: #526579;
+
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+/* ================================
+   BUILD BUTTON
+================================ */
+
+.build-btn {
+  position: relative;
+
+  padding: 16px 20px;
+
+  background: transparent;
+
+  border: 1px solid #101820;
+
+  color: #101820;
+
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.build-btn span {
+  margin-left: 15px;
+
+  display: inline-block;
+
+  transition: transform 0.3s ease;
+}
+
+.build-btn:hover {
+  background: #101820;
+  color: white;
+
+  transform: translateY(-4px);
+}
+
+.build-btn:hover span {
+  transform: translate(5px, -5px);
+}
+
+/* ================================
+   DOTTED PATH
+================================ */
+
+.dotted-path {
+  position: absolute;
+
+  width: 300px;
+  height: 150px;
+
+  left: 20px;
+  bottom: -160px;
+
+  border-bottom: 1px dashed rgba(0, 170, 215, 0.45);
+
+  border-radius: 50%;
+
+  transform: rotate(-8deg);
+}
+
+.path-dot {
+  position: absolute;
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+
+  background: #079fc8;
+
+  left: 0;
+  top: 20px;
+
+  box-shadow: 0 0 15px rgba(0, 170, 215, 0.6);
+
+  animation: pulseDot 2s infinite;
+}
+
+.path-arrow {
+  position: absolute;
+
+  right: -5px;
+  top: -8px;
+
+  color: #079fc8;
+
+  font-size: 24px;
+
+  animation: arrowFloat 2s ease-in-out infinite;
+}
+
+/* ================================
+   TEAM GRID
+================================ */
+
+.teams-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+/* Home page shows 2 columns */
+.teams-section:not(.teams-page) .teams-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* ================================
+   TEAM CARD
+================================ */
+
+.team-card {
+  position: relative;
+
+  min-height: 300px;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  border: 1px solid #e3e5e6;
+
+  box-shadow:
+    0 8px 25px rgba(20, 30, 40, 0.05);
+
+  cursor: pointer;
+
+  opacity: 0;
+
+  transform: translateY(35px);
+
+  animation: cardReveal 0.7s ease forwards;
+  animation-delay: var(--delay);
+
+  transition:
+    transform 0.45s cubic-bezier(.2,.8,.2,1),
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
+}
+
+/* Colored top border */
+
+.team-card::before {
+  content: "";
+
+  position: absolute;
+
+  z-index: 5;
+
+  left: 0;
+  top: 0;
+
+  width: 0;
+  height: 4px;
+
+  background: var(--team-color);
+
+  transition: width 0.45s ease;
+}
+
+.team-card:hover::before {
+  width: 100%;
+}
+
+/* ================================
+   CARD HOVER
+================================ */
+
+.team-card:hover {
+  transform: translateY(-12px) scale(1.015);
+
+  border-color: var(--team-color);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.12),
+    0 0 25px color-mix(
+      in srgb,
+      var(--team-color) 18%,
+      transparent
+    );
+}
+
+/* ================================
+   IMAGE
+================================ */
+
+.team-image-wrapper {
+  position: relative;
+
+  height: 200px;
+
+  overflow: hidden;
+
+  background: #dceff5;
+}
+
+.team-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    transform 0.7s cubic-bezier(.2,.8,.2,1),
+    filter 0.5s ease;
+}
+
+.team-card:hover .team-image {
+  transform: scale(1.1);
+
+  filter: brightness(0.82);
+}
+
+/* Image overlay */
+
+.image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 40%,
+      rgba(0, 0, 0, 0.35)
+    );
+
+  opacity: 0;
+
+  transition: opacity 0.4s ease;
+}
+
+.team-card:hover .image-overlay {
+  opacity: 1;
+}
+
+/* ================================
+   CARD CONTENT
+================================ */
+
+.team-content {
+  padding: 20px 20px 25px;
+}
+
+.team-number {
+  font-family: "Space Mono", monospace;
+
+  font-size: 14px;
+
+  margin-bottom: 6px;
+
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-number {
+  transform: translateX(4px);
+}
+
+.team-content h3 {
+  margin: 0 0 10px;
+
+  font-family: "Barlow Condensed", sans-serif;
+
+  font-size: 23px;
+
+  color: #101820;
+
+  line-height: 1.1;
+
+  font-weight: 800;
+}
+
+.team-content p {
+  margin: 0;
+
+  max-width: 220px;
+
+  color: #617083;
+
+  font-size: 14px;
+
+  line-height: 1.55;
+}
+
+/* ================================
+   SCROLL INDICATOR
+================================ */
+
+.scroll-indicator {
+  position: relative;
+
+  z-index: 5;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  margin-top: 40px;
+}
+
+.scroll-arrow {
+  color: #009fc9;
+
+  font-size: 30px;
+
+  line-height: 20px;
+
+  animation: scrollBounce 1.7s ease-in-out infinite;
+}
+
+.scroll-text {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 8px;
+
+  font-family: "Space Mono", monospace;
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+
+  color: #009fc9;
+}
+
+.scroll-text span {
+  width: 30px;
+
+  height: 1px;
+
+  background: #8ed8e9;
+}
+
+/* ================================
+   VIEW MORE LINK
+================================ */
+
+.view-more-link-container {
+  grid-column: 1 / -1;
+}
+
+.view-more-link {
+  display: block;
+  text-align: center;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e3e5e6;
+  border-radius: 12px;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  color: #101820;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.view-more-link:hover {
+  background: #101820;
+  color: white;
+  transform: translateY(-4px);
+}
+
+/* Hide scroll indicator on teams page */
+.teams-page .scroll-indicator {
+  display: none;
+}
+
+/* Hide view more link on teams page */
+.teams-page .view-more-link-container {
+  display: none;
+}
+
+/* Hide scroll indicator on smaller screens */
+@media (max-width: 950px) {
+  .scroll-indicator {
+    display: none;
+  }
+}
+
+/* ================================
+   ANIMATIONS
+================================ */
+
+@keyframes cardReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes introReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes lineReveal {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes pulseDot {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 170, 215, 0.4);
+  }
+
+  50% {
+    transform: scale(1.35);
+    box-shadow: 0 0 25px rgba(0, 170, 215, 0.7);
+  }
+}
+
+@keyframes arrowFloat {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(5px, -5px);
+  }
+}
+
+@keyframes scrollBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes floatingCircle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1200px) {
+
+  .teams-container {
+    grid-template-columns: 0.8fr 1.5fr;
+    gap: 40px;
+  }
+
+  .teams-grid {
+    gap: 18px;
+  }
+
+  .team-content h3 {
+    font-size: 20px;
+  }
+
+}
+
+@media (max-width: 950px) {
+
+  .teams-section {
+    padding: 70px 5%;
+  }
+
+  .teams-container {
+    grid-template-columns: 1fr;
+  }
+
+  .teams-intro {
+    max-width: 650px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .section-label {
+    justify-content: center;
+  }
+
+  .teams-intro p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .teams-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dotted-path {
+    display: none;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .teams-section {
+    padding: 60px 20px;
+  }
+
+  .teams-intro h2 {
+    font-size: 48px;
+  }
+
+  .teams-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card {
+    min-height: 280px;
+  }
+
+  .team-image-wrapper {
+    height: 180px;
+  }
+
+}

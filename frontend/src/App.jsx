@@ -8,7 +8,7 @@ import Difference from './components/Difference.jsx';
 import PartnerBand from './components/PartnerBand.jsx';
 import Pathway from './components/Pathway.jsx';
 import Competitions from './components/Competitions.jsx';
-import Teams from './components/Teams.jsx';
+import TeamSection from './components/TeamSection.jsx';
 import Gallery from './components/Gallery.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
@@ -50,7 +50,7 @@ function App() {
               <Difference />
               <PartnerBand />
               <Competitions />
-              <Teams />
+              <TeamSection />
               <Gallery />
               <Contact />
               <Footer />
@@ -76,7 +76,7 @@ function App() {
               <Difference />
               <PartnerBand />
               <Competitions />
-              <Teams />
+              <TeamSection />
               <Gallery />
               <Contact />
               <Footer />
