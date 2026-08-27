@@ -38,21 +38,6 @@ const Competitions = () => {
             <h2>Prepare for the Competitions That Matter.</h2>
             <p className="lede">Competition availability, eligibility and participation depend on the respective competition's rules, age categories, selection process and registration requirements.</p>
             
-            <div className="competition-stats">
-              <div className="stat-item">
-                <div className="stat-number">50+</div>
-                <div className="stat-label">Teams Mentored</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number">15+</div>
-                <div className="stat-label">National Wins</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number">8+</div>
-                <div className="stat-label">International Stages</div>
-              </div>
-            </div>
-            
             <a className="comp-link" href="#contact">Prepare for a Competition ↗</a>
           </div>
           <div className="competitions-grid">
