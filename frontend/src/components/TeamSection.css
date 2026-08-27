@@ -286,7 +286,7 @@
 .team-card {
   position: relative;
 
-  min-height: 250px;
+  min-height: 180px;
 
   background: #ffffff;
 
@@ -362,7 +362,7 @@
 .team-image-wrapper {
   position: relative;
 
-  height: 200px;
+  height: 120px;
 
   overflow: hidden;
 
@@ -416,7 +416,7 @@
 ================================ */
 
 .team-content {
-  padding: 20px 20px 25px;
+  padding: 14px 16px 18px;
 }
 
 .team-number {
@@ -434,11 +434,11 @@
 }
 
 .team-content h3 {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
 
   font-family: "Barlow Condensed", sans-serif;
 
-  font-size: 23px;
+  font-size: 18px;
 
   color: #101820;
 
@@ -454,9 +454,9 @@
 
   color: #617083;
 
-  font-size: 14px;
+  font-size: 12px;
 
-  line-height: 1.55;
+  line-height: 1.4;
 }
 
 /* ================================
