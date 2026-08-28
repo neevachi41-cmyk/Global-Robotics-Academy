@@ -3,10 +3,40 @@ import { galleryAPI } from '../services/api';
 
 const Gallery = () => {
   const [galleryItems, setGalleryItems] = useState([]);
+  const [visibleCards, setVisibleCards] = useState(new Set());
 
   useEffect(() => {
     fetchGalleryItems();
   }, []);
+
+  useEffect(() => {
+    if (galleryItems.length > 0) {
+      setupScrollAnimation();
+    }
+  }, [galleryItems]);
+
+  const setupScrollAnimation = () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = parseInt(entry.target.dataset.index);
+            setTimeout(() => {
+              setVisibleCards((prev) => new Set([...prev, index]));
+            }, index * 100);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll('.gallery-card').forEach((card) => {
+      observer.observe(card);
+    });
+
+    return () => observer.disconnect();
+  };
 
   const fetchGalleryItems = async () => {
     try {
@@ -36,7 +66,7 @@ const Gallery = () => {
         </div>
         <div className="gallery-grid">
           {galleryItems.map((item, index) => (
-            <div className="gallery-card" key={index}>
+            <div className={`gallery-card ${visibleCards.has(index) ? 'visible' : ''}`} key={index} data-index={index}>
               <div className="gallery-thumb">
                 <span className="tag">GRA / 0{index + 1}</span>
               </div>

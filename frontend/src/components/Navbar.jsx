@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
@@ -17,6 +18,10 @@ const Navbar = () => {
     window.addEventListener('storage', checkAuth);
     return () => window.removeEventListener('storage', checkAuth);
   }, []);
+
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
 
   const handleLogout = () => {
     localStorage.removeItem('isAuthenticated');
@@ -35,15 +40,15 @@ const Navbar = () => {
           </Link>
         </div>
         <nav className="links">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/programs">Programs</Link>
-          <Link to="/competitions">Competitions</Link>
-          <Link to="/teams">Our Teams</Link>
-          <Link to="/impact">Our Impact</Link>
-          <Link to="/contact">Contact</Link>
+          <Link to="/" className={isActive('/') ? 'active' : ''}>Home</Link>
+          <Link to="/about" className={isActive('/about') ? 'active' : ''}>About</Link>
+          <Link to="/programs" className={isActive('/programs') ? 'active' : ''}>Programs</Link>
+          <Link to="/competitions" className={isActive('/competitions') ? 'active' : ''}>Competitions</Link>
+          <Link to="/teams" className={isActive('/teams') ? 'active' : ''}>Our Teams</Link>
+          <Link to="/impact" className={isActive('/impact') ? 'active' : ''}>Our Impact</Link>
+          <Link to="/contact" className={isActive('/contact') ? 'active' : ''}>Contact</Link>
           {isAuthenticated && (
-            <Link to="/team-form" className="special-link">Build Your Team</Link>
+            <Link to="/team-form" className={`special-link ${isActive('/team-form') ? 'active' : ''}`}>Build Your Team</Link>
           )}
         </nav>
         {isAuthenticated ? (

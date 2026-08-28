@@ -49,8 +49,7 @@ function App() {
               <MomentumStats />
               <Difference />
               <PartnerBand />
-              <Competitions />
-              <TeamSection />
+              <Competitions showAllCompetitions={false} />
               <Gallery />
               <Contact />
               <Footer />
@@ -75,8 +74,7 @@ function App() {
               <MomentumStats />
               <Difference />
               <PartnerBand />
-              <Competitions />
-              <TeamSection />
+              <Competitions showAllCompetitions={false} />
               <Gallery />
               <Contact />
               <Footer />

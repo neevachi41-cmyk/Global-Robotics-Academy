@@ -284,7 +284,7 @@
 .team-card {
   position: relative;
 
-  min-height: 180px;
+  min-height: 200px;
 
   background: #ffffff;
 
@@ -353,18 +353,27 @@
 .team-image-wrapper {
   position: relative;
 
-  height: 120px;
+  height: 160px;
 
   overflow: hidden;
 
-  background: #dceff5;
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.team-image-wrapper.has-background {
+  background: #f0f0f0;
 }
 
 .team-image {
-  width: 100%;
-  height: 100%;
+  max-width: 95%;
+  max-height: 95%;
 
-  object-fit: cover;
+  object-fit: contain;
 
   display: block;
 
@@ -407,7 +416,7 @@
 ================================ */
 
 .team-content {
-  padding: 14px 16px 18px;
+  padding: 16px 18px 20px;
 }
 
 .team-number {
@@ -701,11 +710,11 @@
   }
 
   .team-card {
-    min-height: 280px;
+    min-height: 300px;
   }
 
   .team-image-wrapper {
-    height: 180px;
+    height: 220px;
   }
 
 }

@@ -15,6 +15,7 @@ const Difference = () => {
           <p className="eyebrow">The GRA Difference</p>
           <h2>Train<br/>With<br/><span className="orange">Intent.</span></h2>
           <p className="lede">Don't just learn robotics. Train to compete.</p>
+          <button className="btn" onClick={() => handleSeeMore('/impact')}>Our Impact ↗</button>
         </div>
         <div className="diff-cards">
           <div className="diff-card">
