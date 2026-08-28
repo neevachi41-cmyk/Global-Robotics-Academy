@@ -50,7 +50,6 @@ function App() {
               <Difference />
               <PartnerBand />
               <Competitions showAllCompetitions={false} />
-              <TeamSection />
               <Gallery />
               <Contact />
               <Footer />
@@ -76,7 +75,6 @@ function App() {
               <Difference />
               <PartnerBand />
               <Competitions showAllCompetitions={false} />
-              <TeamSection />
               <Gallery />
               <Contact />
               <Footer />

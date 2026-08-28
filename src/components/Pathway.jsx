@@ -1,6 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Pathway = () => {
+  const [visibleSteps, setVisibleSteps] = useState(new Set());
+
+  useEffect(() => {
+    setupScrollAnimation();
+  }, []);
+
+  const setupScrollAnimation = () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = parseInt(entry.target.dataset.index);
+            setTimeout(() => {
+              setVisibleSteps((prev) => new Set([...prev, index]));
+            }, index * 100);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll('.step').forEach((step) => {
+      observer.observe(step);
+    });
+
+    return () => observer.disconnect();
+  };
+
   const steps = [
     { number: '01', phase: 'FOUNDATION', title: 'Learn', description: 'Electronics, mechanics, sensors, motors and the basics of programming.' },
     { number: '02', phase: 'MAKER', title: 'Build', description: 'Turn ideas into working robots and understand how the system fits together.' },
@@ -37,7 +66,7 @@ const Pathway = () => {
             
             <div className="steps">
               {steps.map((step, index) => (
-                <article className="step" key={index} style={{ animationDelay: `${0.15 + index * 0.25}s` }}>
+                <article className={`step ${visibleSteps.has(index) ? 'visible' : ''}`} key={index} data-index={index}>
                   <div className="card">
                     <div className="meta">
                       <span className="number">{step.number}</span>

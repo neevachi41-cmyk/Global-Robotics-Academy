@@ -1,36 +1,158 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { contactAPI } from '../services/api';
 
 const Contact = () => {
-  const navigate = useNavigate();
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [formData, setFormData] = useState({
+    parentName: '',
+    schoolName: '',
+    city: '',
+    phone: '',
+    email: '',
+    areaOfInterest: 'Robotics Competition Training',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState('');
 
-  useEffect(() => {
-    const auth = localStorage.getItem('isAuthenticated');
-    setIsAuthenticated(auth === 'true');
-  }, []);
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
 
-  const openTeamForm = () => {
-    if (isAuthenticated) {
-      navigate('/team-form');
-    } else {
-      navigate('/login');
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('');
+
+    try {
+      const response = await contactAPI.create(formData);
+      setSubmitStatus('success');
+      setFormData({
+        parentName: '',
+        schoolName: '',
+        city: '',
+        phone: '',
+        email: '',
+        areaOfInterest: 'Robotics Competition Training',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
     <section className="contact" id="contact">
       <div className="wrap">
-        <div className="contact-text">
-          <p className="eyebrow">Your Next Move</p>
-          <h1>Ready to Build<br/><span className="orange">Your Team?</span></h1>
-          <p className="lede">Competition teams aren't built overnight. They are built through training, practice, failure, improvement and persistence.</p>
-          <button className="btn" onClick={openTeamForm} style={{ marginTop: '24px' }}>Start Building Your Team ↗</button>
-          <div className="contact-info" style={{ marginTop: '40px' }}>
-            <a href="tel:+919922552891">+91 9922552891</a>
-            <a href="mailto:gra.stemsage@gmail.com">gra.stemsage@gmail.com</a>
-            <a className="wa" href="#">Chat on WhatsApp ↗</a>
+        <div className="contact-form-container">
+          <div className="form-header">
+            <p className="form-eyebrow">01 — 05</p>
+            <h2>START A CONVERSATION</h2>
           </div>
+          
+          <form className="contact-form" onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="parentName">Parent / Student Name</label>
+              <input
+                type="text"
+                id="parentName"
+                name="parentName"
+                value={formData.parentName}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="schoolName">School Name</label>
+              <input
+                type="text"
+                id="schoolName"
+                name="schoolName"
+                value={formData.schoolName}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="city">City</label>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                value={formData.city}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="areaOfInterest">AREA OF INTEREST</label>
+              <select
+                id="areaOfInterest"
+                name="areaOfInterest"
+                value={formData.areaOfInterest}
+                onChange={handleChange}
+              >
+                <option value="Robotics Competition Training">Robotics Competition Training</option>
+                <option value="AI Competition Preparation">AI Competition Preparation</option>
+                <option value="STEM Competition Preparation">STEM Competition Preparation</option>
+                <option value="Coding Competition Preparation">Coding Competition Preparation</option>
+                <option value="Drone Competition Preparation">Drone Competition Preparation</option>
+                <option value="School Partnership">School Partnership</option>
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="message">MESSAGE</label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                rows="4"
+              />
+            </div>
+
+            <button type="submit" className="submit-btn" disabled={isSubmitting}>
+              {isSubmitting ? 'Sending...' : 'CONNECT WITH THE ACADEMY'}
+            </button>
+
+            {submitStatus === 'success' && (
+              <p className="success-message">Thank you! Your message has been sent successfully.</p>
+            )}
+            {submitStatus === 'error' && (
+              <p className="error-message">Sorry, there was an error sending your message. Please try again.</p>
+            )}
+          </form>
         </div>
       </div>
     </section>

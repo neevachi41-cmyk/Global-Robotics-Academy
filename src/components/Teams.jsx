@@ -93,6 +93,20 @@ const iconMap = {
 const Teams = ({ showAll = false }) => {
   const [teams, setTeams] = useState([]);
 
+  const getDefaultImage = (teamName) => {
+    const imageMap = {
+      'Team Aviot-o-Virture': '/Team  Aviot-o-Virture.png',
+      'Team Kakli Robotics': '/Team Kakli Robotics.png',
+      'Team FORTRANS': '/team FORTRANS.png',
+      'Team Atutomatrix': '/team Atutomatrix.png',
+      'Team Vhyuastra': '/Vyuhaastra Robotics.png',
+      'Team VhyuAstra Junior': '/Vyuhaastra Robotics.png',
+      'Team Vyuhaastra': '/Vyuhaastra Robotics.png',
+      'Team Vyuhaastra Robotics': '/Vyuhaastra Robotics.png'
+    };
+    return imageMap[teamName] || null;
+  };
+
   useEffect(() => {
     fetchTeams();
   }, []);
@@ -100,7 +114,12 @@ const Teams = ({ showAll = false }) => {
   const fetchTeams = async () => {
     try {
       const response = await teamsAPI.getAll();
-      setTeams(response.data);
+      // If API returns teams without images, add default images
+      const teamsWithImages = response.data.map(team => ({
+        ...team,
+        image: team.image || getDefaultImage(team.name)
+      }));
+      setTeams(teamsWithImages);
     } catch (error) {
       console.error('Error fetching teams:', error);
       // Fallback to static data if API fails
@@ -109,37 +128,37 @@ const Teams = ({ showAll = false }) => {
           name: 'Team Aviot-o-Virture', 
           description: 'Student-led robotics team within the Global Robotics Academy ecosystem.',
           color: '#2196F3',
-          iconType: 'robot'
+          image: '/Team  Aviot-o-Virture.png'
         },
         { 
           name: 'Team Kakli Robotics', 
           description: 'Student-led robotics team within the Global Robotics Academy ecosystem.',
           color: '#FFC107',
-          iconType: 'arm'
+          image: '/Team Kakli Robotics.png'
         },
         { 
           name: 'Team FORTRANS', 
           description: 'Student-led robotics team within the Global Robotics Academy ecosystem.',
           color: '#9C27B0',
-          iconType: 'claw'
+          image: '/team FORTRANS.png'
         },
         { 
           name: 'Team Atutomatrix', 
           description: 'Student-led robotics team within the Global Robotics Academy ecosystem.',
           color: '#4CAF50',
-          iconType: 'circuit'
+          image: '/team Atutomatrix.png'
         },
         { 
           name: 'Team Vhyuastra', 
           description: 'Student-led robotics team within the Global Robotics Academy ecosystem.',
           color: '#F44336',
-          iconType: 'gear'
+          image: '/Vyuhaastra Robotics.png'
         },
         { 
           name: 'Team VhyuAstra Junior', 
           description: 'Student-led robotics team within the Global Robotics Academy ecosystem.',
           color: '#2196F3',
-          iconType: 'star'
+          image: '/Vyuhaastra Robotics.png'
         },
       ]);
     }
@@ -151,6 +170,18 @@ const Teams = ({ showAll = false }) => {
   const getIconComponent = (iconType, color) => {
     const IconComponent = iconMap[iconType] || RobotHeadIcon;
     return <IconComponent color={color} />;
+  };
+
+  const getTeamLogo = (team) => {
+    if (team.image) {
+      return <img src={team.image} alt={team.name} className="team-logo-image" />;
+    }
+    if (team.iconType) {
+      return <div className="team-icon" style={{ color: team.color }}>
+        {getIconComponent(team.iconType, team.color)}
+      </div>;
+    }
+    return null;
   };
 
   return (
@@ -167,9 +198,7 @@ const Teams = ({ showAll = false }) => {
             <div className="team-card" key={index} style={{ borderColor: team.color }}>
               <div className="team-card-header">
                 <div className="team-number">Team 0{index + 1}</div>
-                <div className="team-icon" style={{ color: team.color }}>
-                  {getIconComponent(team.iconType, team.color)}
-                </div>
+                {getTeamLogo(team)}
               </div>
               <div className="team-card-body">
                 <h4>{team.name}</h4>

@@ -7,6 +7,42 @@ const TeamSection = ({ showAll = false }) => {
   const [teams, setTeams] = useState([]);
   const [visibleCards, setVisibleCards] = useState(new Set());
 
+  const getDefaultImage = (teamName) => {
+    const imageMap = {
+      'TEAM AVIOT-O-VIRTURE': '/Team  Aviot-o-Virture.png',
+      'Team Aviot-o-Virture': '/Team  Aviot-o-Virture.png',
+      'TEAM KAKLI ROBOTICS': '/Team Kakli Robotics.png',
+      'Team Kakli Robotics': '/Team Kakli Robotics.png',
+      'TEAM FORTRANS': '/team FORTRANS.png',
+      'Team FORTRANS': '/team FORTRANS.png',
+      'TEAM ATUTOMATRIX': '/team Atutomatrix.png',
+      'Team Atutomatrix': '/team Atutomatrix.png',
+      'TEAM VHYUASTRA': '/Vyuhaastra Robotics.png',
+      'Team Vhyuastra': '/Vyuhaastra Robotics.png',
+      'TEAM VHYUASTRA JUNIOR': '/Vyuhaastra Robotics.png',
+      'Team VhyuAstra Junior': '/Vyuhaastra Robotics.png'
+    };
+    
+    const hasBackgroundMap = {
+      'TEAM VHYUASTRA': true,
+      'Team Vhyuastra': true,
+      'TEAM VHYUASTRA JUNIOR': true,
+      'Team VhyuAstra Junior': true
+    };
+    
+    return imageMap[teamName] || null;
+  };
+
+  const hasBackground = (teamName) => {
+    const hasBackgroundMap = {
+      'TEAM VHYUASTRA': true,
+      'Team Vhyuastra': true,
+      'TEAM VHYUASTRA JUNIOR': true,
+      'Team VhyuAstra Junior': true
+    };
+    return hasBackgroundMap[teamName] || false;
+  };
+
   useEffect(() => {
     fetchTeams();
   }, []);
@@ -43,7 +79,13 @@ const TeamSection = ({ showAll = false }) => {
   const fetchTeams = async () => {
     try {
       const response = await teamsAPI.getAll();
-      setTeams(response.data);
+      // If API returns teams without images, add default images
+      const teamsWithImages = response.data.map(team => ({
+        ...team,
+        image: team.image || getDefaultImage(team.name),
+        hasBackground: team.hasBackground || hasBackground(team.name)
+      }));
+      setTeams(teamsWithImages);
     } catch (error) {
       console.error('Error fetching teams:', error);
       // Fallback to static data if API fails
@@ -53,42 +95,44 @@ const TeamSection = ({ showAll = false }) => {
           name: "TEAM AVIOT-O-VIRTURE",
           description: "Student-led robotics team within the Global Robotics Academy ecosystem.",
           color: "#00a9d6",
-          image: "/robot_image_1.webp"
+          image: "/Team  Aviot-o-Virture.png"
         },
         { 
           id: "02",
           name: "TEAM KAKLI ROBOTICS",
           description: "Student-led robotics team within the Global Robotics Academy ecosystem.",
           color: "#f5a800",
-          image: "/robot_image_2.webp"
+          image: "/Team Kakli Robotics.png"
         },
         { 
           id: "03",
           name: "TEAM FORTRANS",
           description: "Student-led robotics team within the Global Robotics Academy ecosystem.",
           color: "#7b3fe4",
-          image: "/robot_image_3.webp"
+          image: "/team FORTRANS.png"
         },
         { 
           id: "04",
           name: "TEAM ATUTOMATRIX",
           description: "Student-led robotics team within the Global Robotics Academy ecosystem.",
           color: "#14b866",
-          image: "/robot_image_4.webp"
+          image: "/team Atutomatrix.png"
         },
         { 
           id: "05",
           name: "TEAM VHYUASTRA",
           description: "Student-led robotics team within the Global Robotics Academy ecosystem.",
           color: "#ef3340",
-          image: "/robot_image_5.webp"
+          image: "/Vyuhaastra Robotics.png",
+          hasBackground: true
         },
         { 
           id: "06",
           name: "TEAM VHYUASTRA JUNIOR",
           description: "Student-led robotics team within the Global Robotics Academy ecosystem.",
           color: "#2784df",
-          image: "/robot_image_6.webp"
+          image: "/Vyuhaastra Robotics.png",
+          hasBackground: true
         },
       ]);
     }
@@ -160,10 +204,10 @@ const TeamSection = ({ showAll = false }) => {
             >
 
               {/* TEAM IMAGE */}
-              <div className="team-image-wrapper">
+              <div className={`team-image-wrapper ${team.hasBackground ? 'has-background' : ''}`}>
 
                 <img
-                  src={team.image || "/robot_image_1.webp"}
+                  src={team.image || getDefaultImage(team.name) || "/robot_image_1.webp"}
                   alt={team.name}
                   className="team-image"
                 />
