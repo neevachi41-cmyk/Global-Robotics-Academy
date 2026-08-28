@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { competitionsAPI } from '../services/api';
 
-const Competitions = () => {
+const Competitions = ({ showAllCompetitions = false }) => {
+  const navigate = useNavigate();
   const [competitions, setCompetitions] = useState([]);
-  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
     fetchCompetitions();
@@ -38,26 +39,11 @@ const Competitions = () => {
             <h2>Prepare for the Competitions That Matter.</h2>
             <p className="lede">Competition availability, eligibility and participation depend on the respective competition's rules, age categories, selection process and registration requirements.</p>
             
-            <div className="competition-stats">
-              <div className="stat-item">
-                <div className="stat-number">50+</div>
-                <div className="stat-label">Teams Mentored</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number">15+</div>
-                <div className="stat-label">National Wins</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number">8+</div>
-                <div className="stat-label">International Stages</div>
-              </div>
-            </div>
-            
             <a className="comp-link" href="#contact">Prepare for a Competition ↗</a>
           </div>
           <div className="competitions-grid">
             <div className="comp-grid">
-              {competitions.slice(0, showAll ? competitions.length : 4).map((competition, index) => (
+              {competitions.slice(0, showAllCompetitions ? competitions.length : 4).map((competition, index) => (
                 <div className="comp-card" key={index}>
                   <div className="n">0{index + 1}</div>
                   <span className="trophy">🏆</span>
@@ -67,8 +53,8 @@ const Competitions = () => {
                 </div>
               ))}
             </div>
-            {!showAll && competitions.length > 4 && (
-              <button className="see-more-btn" onClick={() => setShowAll(true)}>
+            {!showAllCompetitions && competitions.length > 4 && (
+              <button className="see-more-btn" onClick={() => navigate('/competitions')}>
                 See More
               </button>
             )}

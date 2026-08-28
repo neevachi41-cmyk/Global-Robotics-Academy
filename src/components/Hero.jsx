@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="bg-circle hero-circle-two"></div>
       
       <div className="wrap hero-grid">
-        <div className="hero-content">
+        <div className="hero-content hero-intro">
           <div className="section-label">
             NATIONAL & INTERNATIONAL COMPETITION PREPARATION
             <span></span>
@@ -20,12 +20,6 @@ const Hero = () => {
           <div className="hero-ctas">
             <Link className="btn" to="/login">Start Your Competition Journey ↗</Link>
             <Link className="btn outline" to="/competitions">Explore Competitions</Link>
-          </div>
-          
-          {/* Decorative dotted path */}
-          <div className="dotted-path hero-dotted-path">
-            <div className="path-dot"></div>
-            <div className="path-arrow">➜</div>
           </div>
         </div>
         <div className="hero-card">
