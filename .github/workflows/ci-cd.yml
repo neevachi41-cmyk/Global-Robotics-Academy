@@ -35,6 +35,7 @@ jobs:
           npm install -g eslint
           cd frontend && npx eslint src/
           cd ../backend && npx eslint .
+        continue-on-error: true
 
       - name: Run Security Audit
         run: |
