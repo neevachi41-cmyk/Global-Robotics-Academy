@@ -104,12 +104,27 @@ body{
   overflow-x: hidden;
   width: 100%;
   min-height: 100vh;
+  max-width: 100vw;
+}
+
+/* Ensure all sections are visible */
+section {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 img, video {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+/* Prevent content from being cut off */
+.page {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -150,7 +165,7 @@ h1,h2,h3,h4,h5,h6{
 
 a{color:inherit;text-decoration:none;}
 
-.wrap{max-width:var(--container-xl);margin:0 auto;padding:0 clamp(1rem, 3vw, 4rem);width:100%;max-width: min(var(--container-xl), 95vw);}
+.wrap{max-width:var(--container-xl);margin:0 auto;padding:0 clamp(1rem, 3vw, 4rem);width:100%;max-width: min(var(--container-xl), 95vw);box-sizing:border-box;}
 
 section{position:relative;}
 
@@ -3753,9 +3768,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #12181c;
   position: relative;
   overflow: hidden;
-  min-height: 50vh;
+  min-height: clamp(40vh, 60vh, 50vh);
+  max-height: 80vh;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .programs-hero::before {
@@ -3839,6 +3856,9 @@ h1, h2, h3, h4, h5, h6 {
 .programs-grid-section {
   padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 3vw, 1.25rem);
   background: #f8f9fa;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .programs-grid-section .section-header {
@@ -4000,6 +4020,9 @@ h1, h2, h3, h4, h5, h6 {
 .program-structure-section {
   padding: clamp(3rem, 6vw, 6.25rem) clamp(1rem, 3vw, 1.25rem);
   background: white;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .structure-content {
@@ -4081,6 +4104,9 @@ h1, h2, h3, h4, h5, h6 {
 .programs-why-section {
   padding: clamp(3rem, 6vw, 6.25rem) clamp(1rem, 3vw, 1.25rem);
   background: var(--mint);
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .programs-why-section .section-header {
@@ -4150,9 +4176,13 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--orange);
   color: white;
   text-align: center;
-  min-height: 40vh;
+  min-height: clamp(30vh, 50vh, 40vh);
+  max-height: 70vh;
   display: flex;
   align-items: center;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .cta-content {
