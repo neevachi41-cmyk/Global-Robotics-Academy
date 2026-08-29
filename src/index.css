@@ -74,6 +74,15 @@ body{
 
   -moz-osx-font-smoothing:grayscale;
 
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -121,6 +130,21 @@ section{position:relative;}
 .orange{color:var(--orange);}
 
 .teal{color:var(--teal);}
+
+/* Text readability improvements */
+p, li, td, th {
+  max-width: 70ch;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  max-width: 80ch;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
 
 
 
@@ -3721,7 +3745,8 @@ h1, h2, h3, h4, h5, h6 {
 .programs-hero-content {
   position: relative;
   z-index: 1;
-  max-width: 800px;
+  max-width: var(--container-xl);
+  width: 100%;
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.6s ease;
@@ -3858,28 +3883,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .program-card h3 {
-  font-size: 22px;
+  font-size: var(--font-size-xl);
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: clamp(0.5rem, 1vw, 0.75rem);
   color: #1a1a1a;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .program-description {
-  font-size: 15px;
+  font-size: var(--font-size-base);
   line-height: 1.6;
   color: #666;
-  margin-bottom: 24px;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
   flex-grow: 1;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .program-details {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 20px;
-  padding: 16px;
+  gap: clamp(0.5rem, 1vw, 0.75rem);
+  margin-bottom: clamp(1rem, 2vw, 1.25rem);
+  padding: clamp(0.75rem, 1.5vw, 1rem);
   background: #f8f9fa;
-  border-radius: 8px;
+  border-radius: clamp(0.5rem, 1vw, 0.5rem);
 }
 
 .detail-item {
@@ -3889,15 +3920,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .detail-label {
-  font-size: 13px;
+  font-size: var(--font-size-xs);
   color: #888;
   font-weight: 500;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .detail-value {
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   color: #333;
   font-weight: 600;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: right;
 }
 
 .program-features {
