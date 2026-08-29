@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Footer from '../components/Footer.jsx';
 
 const Signup = () => {
@@ -108,10 +108,7 @@ const Signup = () => {
             </button>
             
             <div className="signup-link">
-              <p>Already have an account? <a href="/login" onClick={(e) => {
-                e.preventDefault();
-                navigate('/login');
-              }}>Sign in</a></p>
+              <p>Already have an account? <Link to="/login">Sign in</Link></p>
             </div>
           </form>
         </div>

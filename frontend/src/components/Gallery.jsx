@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { galleryAPI } from '../services/api';
 
 const Gallery = () => {
@@ -46,9 +47,9 @@ const Gallery = () => {
       console.error('Error fetching gallery items:', error);
       // Fallback to static data if API fails
       setGalleryItems([
-        { title: 'Robotics Arena', description: 'Admin-managed gallery content will appear here.', category: 'Training' },
-        { title: 'Team Work', description: 'Admin-managed gallery content will appear here.', category: 'Team Activities' },
-        { title: 'Test / Optimize', description: 'Admin-managed gallery content will appear here.', category: 'Robot Testing' },
+        { title: 'Robotics Arena', description: 'Students practicing on competition-grade robotics arenas with real challenges.', category: 'Training' },
+        { title: 'Team Work', description: 'Collaborative problem-solving and team building during robotics training sessions.', category: 'Team Activities' },
+        { title: 'Test & Optimize', description: 'Systematic testing and optimization of robots for competition performance.', category: 'Robot Testing' },
       ]);
     }
   };
@@ -62,7 +63,7 @@ const Gallery = () => {
             <h2>See the Teams in Action.</h2>
             <p className="lede">Training, robot building, testing and competition stories from the academy ecosystem.</p>
           </div>
-          <a className="gallery-link" href="#contact">Share Your Story ↗</a>
+          <Link className="gallery-link" to="/contact">Share Your Story ↗</Link>
         </div>
         <div className="gallery-grid">
           {galleryItems.map((item, index) => (
@@ -83,7 +84,7 @@ const Gallery = () => {
             <p className="eyebrow">Video Manager</p>
             <h3>Team Stories, Robot Tests, Competition Days.</h3>
           </div>
-          <a className="btn outline" href="#contact">Add Your Video ↗</a>
+          <Link className="btn outline" to="/contact">Add Your Video ↗</Link>
         </div>
       </div>
     </section>

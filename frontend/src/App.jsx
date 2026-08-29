@@ -24,6 +24,7 @@ import ContactPage from './pages/Contact.jsx';
 import Login from './pages/Login.jsx';
 import Signup from './pages/Signup.jsx';
 import TeamForm from './pages/TeamForm.jsx';
+import ForgotPassword from './pages/ForgotPassword.jsx';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -66,6 +67,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/team-form" element={<TeamForm />} />
           <Route path="*" element={
             <>

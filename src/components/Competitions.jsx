@@ -56,6 +56,7 @@ const Competitions = ({ showAllCompetitions = false }) => {
         { name: 'e-Yantra Robotics Competition', description: 'Competition preparation pathway for students and teams.', category: 'Robotics' },
         { name: 'IIT Techfest Robotics Competition', description: 'Competition preparation pathway for students and teams.', category: 'Robotics' },
         { name: 'Anvesh Bharat', description: 'Competition preparation pathway for students and teams.', category: 'Robotics' },
+        { name: 'International Robotics Competition | Mekathlon Event', description: 'Competition preparation pathway for students and teams.', category: 'Robotics' },
       ]);
     }
   };
@@ -70,31 +71,6 @@ const Competitions = ({ showAllCompetitions = false }) => {
             {showAllCompetitions && (
               <>
                 <p className="lede">Competition availability, eligibility and participation depend on the respective competition's rules, age categories, selection process and registration requirements.</p>
-                <p className="additional-text">Our comprehensive directory covers national and international robotics, STEM, AI, coding, innovation and technology competitions. Each competition entry provides essential details to help students and teams understand requirements, prepare effectively, and maximize their chances of success.</p>
-                <p className="additional-text">From school-level championships to prestigious international events, we guide you through the preparation pathway with training resources, team development support, and strategic planning assistance.</p>
-                
-                <div className="competitions-images">
-                  <div className="comp-image-wrapper">
-                    <img src="/Image 1.jpeg" alt="Marine robotics competition" className="comp-image" />
-                  </div>
-                  <div className="comp-image-wrapper">
-                    <img src="/Image 1.jpeg" alt="Boat engineering" className="comp-image" />
-                  </div>
-                  <div className="comp-image-wrapper">
-                    <img src="/Image 1.jpeg" alt="Autonomous vehicles" className="comp-image" />
-                  </div>
-                  <div className="comp-image-wrapper">
-                    <img src="/Image 1.jpeg" alt="Marine technology" className="comp-image" />
-                  </div>
-                  <div className="comp-image-wrapper">
-                    <img src="/Image 1.jpeg" alt="Water robotics" className="comp-image" />
-                  </div>
-                  <div className="comp-image-wrapper">
-                    <img src="/Image 1.jpeg" alt="Naval engineering" className="comp-image" />
-                  </div>
-                </div>
-                
-                <a className="comp-link" href="#contact">Prepare for a Competition ↗</a>
               </>
             )}
           </div>

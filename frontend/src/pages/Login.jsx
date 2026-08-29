@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Footer from '../components/Footer.jsx';
 
 const Login = () => {
@@ -68,7 +68,7 @@ const Login = () => {
                 <input type="checkbox" />
                 <span>Remember me</span>
               </label>
-              <span className="forgot-link">Forgot password?</span>
+              <Link to="/forgot-password" className="forgot-link">Forgot password?</Link>
             </div>
             
             <button type="submit" className="btn login-btn">
@@ -76,10 +76,7 @@ const Login = () => {
             </button>
             
             <div className="signup-link">
-              <p>Don't have an account? <a href="/signup" onClick={(e) => {
-                e.preventDefault();
-                navigate('/signup');
-              }}>Create one</a></p>
+              <p>Don't have an account? <Link to="/signup">Create one</Link></p>
             </div>
           </form>
         </div>
