@@ -1,0 +1,97 @@
+import React from 'react';
+
+const Pathway = () => {
+  const milestones = [
+    { number: '01', phase: 'FOUNDATION', title: 'LEARN', description: 'Learn the fundamentals of electronics, mechanics, sensors & motors.', icon: 'chip' },
+    { number: '02', phase: 'MAKER', title: 'BUILD', description: 'Turn ideas into a working robot/model with their own hands.', icon: 'robot' },
+    { number: '03', phase: 'CONTROL', title: 'PROGRAM', description: 'Program the robot/model to move, sense, think and react.', icon: 'code' },
+    { number: '04', phase: 'DEBUG', title: 'TEST', description: 'Test, find failures, debug and make the robot/model work reliably.', icon: 'search' },
+    { number: '05', phase: 'REFINE', title: 'IMPROVE', description: 'Upgrade every version to become faster, stronger and smarter.', icon: 'upgrade' },
+    { number: '06', phase: 'CHALLENGE', title: 'COMPETE', description: 'Train through challenges and compete on real competition arenas.', icon: 'trophy' },
+    { number: '07', phase: 'PROGRESS', title: 'QUALIFY', description: 'Build strategy, teamwork and performance to qualify for competitions.', icon: 'team' },
+    { number: '08', phase: 'REPRESENT', title: 'REPRESENT', description: 'Represent the academy at national and international competitions.', icon: 'medal' },
+  ];
+
+  const getIcon = (iconType) => {
+    switch(iconType) {
+      case 'chip':
+        return (
+          <svg viewBox="0 0 40 40">
+          </svg>
+        );
+      case 'robot':
+        return ;
+      case 'code':
+        return (
+          <svg viewBox="0 0 40 40">
+          </svg>
+        );
+      case 'search':
+        return ;
+         (
+          <svg viewBox="0 0 40 40">
+          </svg>
+        );
+      case 'upgrade':
+        return (
+          <svg viewBox="0 0 40 40">
+          </svg>
+        );
+      case 'trophy':
+        return (
+          <svg viewBox="0 0 40 40">
+          </svg>
+        );
+      case 'team':
+        return (
+          <svg viewBox="0 0 40 40">
+          </svg>
+        );
+      case 'medal':
+        return;
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <section className="roadmap-section">
+      <div className="roadmap-container">
+        <div className="hero">
+          <h1>FROM FIRST BUILD<br/>TO COMPETITION DAY.</h1>
+          <p className="hero-copy">
+            At Global Robotics Academy, the goal is simple —
+            <strong>build students who can actually build and operate robots,
+            not just follow a project manual.</strong>
+          </p>
+        </div>
+
+        <div className="timeline">
+          <div className="timeline-line">
+            <div className="timeline-progress"></div>
+          </div>
+
+          {milestones.map((milestone, index) => (
+            <div className="milestone" key={index}>
+              <div className="connector"></div>
+              <div className="node"></div>
+              <div className="card">
+                <div className="card-top">
+                  <div className="icon">{getIcon(milestone.icon)}</div>
+                  <div className="meta">
+                    <span className="number">{milestone.number}</span>
+                  </div>
+                </div>
+                <div className="small-line"></div>
+                <h2>{milestone.title}</h2>
+                <p>{milestone.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Pathway;
