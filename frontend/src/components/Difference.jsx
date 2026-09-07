@@ -34,7 +34,6 @@ const Difference = () => {
         </div>
         <div className="diff-cards">
           <div className={`diff-card ${expandedCards[0] ? 'expanded' : ''}`}>
-            <div className="n">01</div>
             <h4>COMPETITION-FOCUSED TRAINING</h4>
             <p>Every training session is designed to move students one step closer to competing confidently.</p>
             {expandedCards[0] && (
@@ -45,7 +44,6 @@ const Difference = () => {
             </span>
           </div>
           <div className={`diff-card ${expandedCards[1] ? 'expanded' : ''}`}>
-            <div className="n">02</div>
             <h4>REAL ROBOT BUILDING</h4>
             <p>Students turn concepts into machines they can build, control and improve themselves.</p>
             {expandedCards[1] && (
@@ -56,7 +54,6 @@ const Difference = () => {
             </span>
           </div>
           <div className={`diff-card ${expandedCards[2] ? 'expanded' : ''}`}>
-            <div className="n">03</div>
             <h4>TEAM DEVELOPMENT</h4>
             <p>The journey teaches students that winning isn't just about the machine—it's about the people behind it.</p>
             {expandedCards[2] && (
@@ -67,7 +64,6 @@ const Difference = () => {
             </span>
           </div>
           <div className={`diff-card ${expandedCards[3] ? 'expanded' : ''}`}>
-            <div className="n">04</div>
             <h4>NATIONAL & INTERNATIONAL EXPOSURE</h4>
             <p>The goal is not simply to participate—it is to prepare students to confidently represent their team, academy and institution.</p>
             {expandedCards[3] && (

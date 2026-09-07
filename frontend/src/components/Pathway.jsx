@@ -78,9 +78,6 @@ const Pathway = () => {
               <div className="card">
                 <div className="card-top">
                   <div className="icon">{getIcon(milestone.icon)}</div>
-                  <div className="meta">
-                    <span className="number">{milestone.number}</span>
-                  </div>
                 </div>
                 <div className="small-line"></div>
                 <h2>{milestone.title}</h2>
