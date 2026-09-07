@@ -871,7 +871,7 @@ nav.links .special-link::after{background:var(--teal);}
 
   height:3px;
 
-  background:var(--orange);
+  background:transparent;
 
   border-radius:2px;
 
