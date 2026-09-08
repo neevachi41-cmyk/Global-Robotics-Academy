@@ -234,40 +234,6 @@ const MomentumStats = () => {
                   lineHeight: '1',
                   minWidth: '80px',
                   textAlign: 'left'
-                }}>3+</div>
-                <div style={{ 
-                  width: '1px', 
-                  height: '30px', 
-                  background: '#E3E1DA',
-                  flexShrink: 0
-                }} />
-                <div className="stat-label" style={{ 
-                  fontSize: '11px', 
-                  color: '#5a6067', 
-                  fontWeight: '600', 
-                  lineHeight: '1.3',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.08em',
-                  flex: 1
-                }}>International Stages (India Represents)</div>
-              </div>
-              
-              <div className="stat-item" style={{ 
-                display: 'flex',
-                alignItems: 'center',
-                padding: '14px 16px',
-                background: '#ffffff',
-                borderRadius: '12px',
-                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.06)',
-                gap: '16px'
-              }}>
-                <div className="stat-number" style={{ 
-                  fontSize: '28px', 
-                  fontWeight: '800', 
-                  color: '#0096B9', 
-                  lineHeight: '1',
-                  minWidth: '80px',
-                  textAlign: 'left'
                 }}>4+</div>
                 <div style={{ 
                   width: '1px', 

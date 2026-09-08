@@ -78,13 +78,6 @@ const Gallery = () => {
             </div>
           ))}
         </div>
-        <div className="video-cta" id="videos">
-          <div>
-            <p className="eyebrow">Video Manager</p>
-            <h3>Team Stories, Robot Tests, Competition Days.</h3>
-          </div>
-          <Link className="btn outline" to="/contact">Add Your Video ↗</Link>
-        </div>
       </div>
     </section>
   );

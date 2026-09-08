@@ -77,9 +77,6 @@ const Competitions = ({ showAllCompetitions = false }) => {
             <div className="comp-grid">
               {competitions.slice(0, showAllCompetitions ? competitions.length : 4).map((competition, index) => (
                 <div className={`comp-card ${visibleCards.has(index) ? 'visible' : ''}`} key={index} data-index={index}>
-                  <div className="comp-card-header">
-                    <span className="trophy">🏆</span>
-                  </div>
                   <h4>{competition.name}</h4>
                   <p>{competition.description}</p>
                 </div>
