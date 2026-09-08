@@ -57,7 +57,7 @@ const Gallery = () => {
   return (
     <section className="gallery" id="gallery">
       <div className="wrap">
-        <div className="gallery-top">
+        <div className="gallery-top" style={{ textAlign: 'center' }}>
           <div>
             <p className="eyebrow">Inside the Robotics Arena</p>
             <h2>See the Teams in Action.</h2>
