@@ -2781,7 +2781,7 @@ h1, h2, h3, h4, h5, h6 {
   .momentum-stats-section {
     min-height: auto !important;
     max-height: auto !important;
-    padding: 80px 0 !important;
+    padding: 60px 0 !important;
   }
   
   .momentum-stats-section .content-wrapper {
@@ -2798,17 +2798,21 @@ h1, h2, h3, h4, h5, h6 {
     height: auto !important;
     aspect-ratio: 16/9 !important;
   }
+  
+  .momentum-stats-section h2 {
+    font-size: 36px !important;
+  }
 }
 
 @media (max-width: 768px) {
   .momentum-stats-section {
-    padding: 60px 16px !important;
+    padding: 40px 16px !important;
     min-height: auto !important;
     max-height: auto !important;
   }
   
   .momentum-stats-section h2 {
-    font-size: 36px !important;
+    font-size: 28px !important;
   }
   
   .momentum-stats-section .stat-item {
@@ -2830,7 +2834,7 @@ h1, h2, h3, h4, h5, h6 {
   .hero {
     min-height: auto !important;
     max-height: auto !important;
-    padding: 80px 0 !important;
+    padding: 60px 0 !important;
   }
   
   .hero-grid {
@@ -2841,12 +2845,33 @@ h1, h2, h3, h4, h5, h6 {
   
   .hero-grid .hero-card {
     order: -1;
+    height: 400px !important;
+  }
+  
+  .hero h1 {
+    font-size: 48px !important;
+  }
+  
+  .hero .lede {
+    font-size: 18px !important;
   }
 }
 
 @media (max-width: 768px) {
   .hero {
-    padding: 60px 0 !important;
+    padding: 40px 0 !important;
+  }
+  
+  .hero h1 {
+    font-size: 36px !important;
+  }
+  
+  .hero .lede {
+    font-size: 16px !important;
+  }
+  
+  .hero-grid .hero-card {
+    height: 300px !important;
   }
 }
 
@@ -2855,17 +2880,25 @@ h1, h2, h3, h4, h5, h6 {
   .roadmap-section {
     min-height: auto !important;
     max-height: auto !important;
-    padding: 80px 0 !important;
+    padding: 60px 0 !important;
   }
   
   .roadmap-container {
     height: auto !important;
   }
+  
+  .roadmap-section h1 {
+    font-size: 36px !important;
+  }
 }
 
 @media (max-width: 768px) {
   .roadmap-section {
-    padding: 60px 0 !important;
+    padding: 40px 0 !important;
+  }
+  
+  .roadmap-section h1 {
+    font-size: 28px !important;
   }
 }
 

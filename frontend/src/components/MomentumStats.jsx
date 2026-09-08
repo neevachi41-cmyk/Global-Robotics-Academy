@@ -8,7 +8,7 @@ const MomentumStats = () => {
       id="momentum"
       style={{
         backgroundColor: '#E8F5E9',
-        padding: '80px 0',
+        padding: '60px 0',
         position: 'relative',
         overflow: 'hidden',
         minHeight: '100vh',
