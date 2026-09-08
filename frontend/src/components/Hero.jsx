@@ -18,8 +18,8 @@ const Hero = () => {
           <h1 style={{ fontSize: '72px', fontWeight: '800', lineHeight: '1.1', marginBottom: '24px' }}>From<br/>Classroom<br/><span className="orange">to<br/>Competition.</span></h1>
           <p className="lede" style={{ fontSize: '20px', lineHeight: '1.6', marginBottom: '32px' }}>Global Robotics Academy prepares students for national and international robotics, STEM, AI, coding, innovation and technology competitions.</p>
           <div className="hero-ctas">
-            <Link className="btn" to="/login">Start Your Competition Journey↗</Link>
-            <Link className="btn outline" to="/competitions">Explore Competitions</Link>
+            <Link className="btn" to="/login" style={{whiteSpace: 'nowrap'}}>Start Your Competition Journey↗</Link>
+            <Link className="btn outline" to="/competitions" style={{whiteSpace: 'nowrap'}}>Explore Competitions</Link>
           </div>
         </div>
         <div className="hero-card" style={{ height: '500px' }}>
