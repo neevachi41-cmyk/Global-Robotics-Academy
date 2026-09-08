@@ -2335,11 +2335,11 @@ nav.links .special-link::after{background:var(--teal);}
 
 /* ---------- FOOTER ---------- */
 
-footer{background:#00AFD6;border-top:1px solid var(--line);padding:clamp(2.5rem, 5vw, 4.375rem) 0;width:100%;max-width:100%;margin:0 auto;}
+footer{background:#00AFD6;border-top:1px solid var(--line);padding:80px 0 40px;width:100%;max-width:100%;margin:0 auto;min-height:300px;}
 
 footer .wrap{padding-left:clamp(1rem, 3vw, 3.75rem);padding-right:clamp(1rem, 3vw, 3.75rem);}
 
-.footer-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 200px), 1fr));gap:clamp(1.5rem, 3vw, 2.5rem);}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 200px), 1fr));gap:clamp(1.5rem, 3vw, 2.5rem);margin-bottom:40px;}
 
 .footer-logo{display:flex;gap:10px;align-items:center;font-weight:500;font-size:18px;text-transform:uppercase;font-family:var(--font-mono);color:#ffffff;}
 
@@ -2357,7 +2357,7 @@ footer .wrap{padding-left:clamp(1rem, 3vw, 3.75rem);padding-right:clamp(1rem, 3v
 
 .footer-col a:hover{color:#E1F5FE;}
 
-.footer-bottom{margin-top:50px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.3);text-align:center;font-family:var(--font-mono);font-size:14px;color:#ffffff;letter-spacing:.06em;text-transform:uppercase;font-weight:400;}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.3);text-align:center;font-family:var(--font-mono);font-size:14px;color:#ffffff;letter-spacing:.06em;text-transform:uppercase;font-weight:400;}
 
 
 
