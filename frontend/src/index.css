@@ -2825,6 +2825,44 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Hero Responsive Styles */
+@media (max-width: 1024px) {
+  .hero {
+    min-height: auto !important;
+    max-height: auto !important;
+    padding: 80px 0 !important;
+  }
+  
+  .hero-grid {
+    height: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0 !important;
+  }
+}
+
+/* Pathway Responsive Styles */
+@media (max-width: 1024px) {
+  .roadmap-section {
+    min-height: auto !important;
+    max-height: auto !important;
+    padding: 80px 0 !important;
+  }
+  
+  .roadmap-container {
+    height: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .roadmap-section {
+    padding: 60px 0 !important;
+  }
+}
+
 
 
 .iot-label {

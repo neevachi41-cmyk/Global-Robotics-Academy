@@ -27,26 +27,6 @@ const Hero = () => {
         </div>
       </div>
     </section>
-    
-    <style>{`
-      @media (max-width: 1024px) {
-        .hero {
-          min-height: auto !important;
-          max-height: auto !important;
-          padding: 80px 0 !important;
-        }
-        
-        .hero-grid {
-          height: auto !important;
-        }
-      }
-      
-      @media (max-width: 768px) {
-        .hero {
-          padding: 60px 0 !important;
-        }
-      }
-    `}</style>
   );
 };
 

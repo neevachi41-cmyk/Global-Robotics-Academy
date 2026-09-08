@@ -88,26 +88,6 @@ const Pathway = () => {
         </div>
       </div>
     </section>
-    
-    <style>{`
-      @media (max-width: 1024px) {
-        .roadmap-section {
-          min-height: auto !important;
-          max-height: auto !important;
-          padding: 80px 0 !important;
-        }
-        
-        .roadmap-container {
-          height: auto !important;
-        }
-      }
-      
-      @media (max-width: 768px) {
-        .roadmap-section {
-          padding: 60px 0 !important;
-        }
-      }
-    `}</style>
   );
 };
 
