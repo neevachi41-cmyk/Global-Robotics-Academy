@@ -4,12 +4,12 @@ import Slideshow from './Slideshow.jsx';
 
 const Hero = () => {
   return (
-    <section className="hero" id="about">
+    <section className="hero" id="about" style={{ minHeight: '100vh', maxHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
       {/* Background decoration */}
       <div className="bg-circle hero-circle-one"></div>
       <div className="bg-circle hero-circle-two"></div>
       
-      <div className="wrap hero-grid">
+      <div className="wrap hero-grid" style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
         <div className="hero-content hero-intro">
           <div className="section-label">
             NATIONAL & INTERNATIONAL COMPETITION PREPARATION
@@ -27,6 +27,26 @@ const Hero = () => {
         </div>
       </div>
     </section>
+    
+    <style>{`
+      @media (max-width: 1024px) {
+        .hero {
+          min-height: auto !important;
+          max-height: auto !important;
+          padding: 80px 0 !important;
+        }
+        
+        .hero-grid {
+          height: auto !important;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .hero {
+          padding: 60px 0 !important;
+        }
+      }
+    `}</style>
   );
 };
 

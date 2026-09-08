@@ -55,8 +55,8 @@ const Pathway = () => {
   };
 
   return (
-    <section className="roadmap-section">
-      <div className="roadmap-container">
+    <section className="roadmap-section" style={{ minHeight: '100vh', maxHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+      <div className="roadmap-container" style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
         <div className="hero">
           <h1>FROM FIRST BUILD<br/>TO COMPETITION DAY.</h1>
           <p className="hero-copy">
@@ -88,6 +88,26 @@ const Pathway = () => {
         </div>
       </div>
     </section>
+    
+    <style>{`
+      @media (max-width: 1024px) {
+        .roadmap-section {
+          min-height: auto !important;
+          max-height: auto !important;
+          padding: 80px 0 !important;
+        }
+        
+        .roadmap-container {
+          height: auto !important;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .roadmap-section {
+          padding: 60px 0 !important;
+        }
+      }
+    `}</style>
   );
 };
 

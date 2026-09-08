@@ -41,20 +41,29 @@ const StatsSlideshow = () => {
   }, [startAutoplay, stopAutoplay]);
 
   return (
-    <div className="slideshow-container">
-      <div className="slideshow-frame">
-        <div className="stage-outer">
-          <div className="diamond">
-            <div className="stage">
+    <div className="slideshow-container" style={{ height: '100%', display: 'flex', flexDirection: 'column', position: 'relative' }}>
+      <div className="slideshow-frame" style={{ flex: 1, display: 'flex', flexDirection: 'column', position: 'relative' }}>
+        <div className="stage-outer" style={{ flex: 1, display: 'flex', flexDirection: 'column', position: 'relative' }}>
+          <div className="diamond" style={{ flex: 1, display: 'flex', flexDirection: 'column', position: 'relative' }}>
+            <div className="stage" style={{ flex: 1, display: 'flex', flexDirection: 'column', position: 'relative' }}>
               {slidesData.map((slide, index) => (
                 <div 
                   key={slide.id} 
                   className={`slide ${index === current ? 'active' : ''}`}
+                  style={{ 
+                    position: 'absolute', 
+                    top: 0, 
+                    left: 0, 
+                    width: '100%', 
+                    height: '100%',
+                    zIndex: index === current ? 1 : 0
+                  }}
                 >
                   <img 
                     id={slide.id} 
                     src={slide.src} 
                     alt={slide.alt}
+                    style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                   />
                 </div>
               ))}
