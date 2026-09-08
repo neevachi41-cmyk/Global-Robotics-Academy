@@ -259,7 +259,8 @@ const MomentumStats = () => {
             justifyContent: 'center',
             alignItems: 'stretch',
             position: 'relative',
-            height: '100%'
+            height: '100%',
+            marginTop: '40px'
           }}>
             <div className="hero-card" style={{ 
               width: '100%', 
