@@ -64,9 +64,6 @@ const Slideshow = () => {
             </div>
           </div>
         </div>
-        <div className="slide-indicator">
-          <span className="arena-text-small">BUILD SYSTEMS<br/>THAT ENTER THE ARENA.</span>
-        </div>
       </div>
     </div>
   );
