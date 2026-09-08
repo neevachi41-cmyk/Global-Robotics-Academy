@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="bg-circle hero-circle-one"></div>
       <div className="bg-circle hero-circle-two"></div>
       
-      <div className="wrap hero-grid" style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+      <div className="wrap hero-grid" style={{ height: '100%', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
         <div className="hero-content hero-intro">
           <div className="section-label">
             NATIONAL & INTERNATIONAL COMPETITION PREPARATION
