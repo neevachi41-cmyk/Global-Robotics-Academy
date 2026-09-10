@@ -8,11 +8,10 @@ const MomentumStats = () => {
       id="momentum"
       style={{
         backgroundColor: '#E8F5E9',
-        padding: '60px 0',
+        padding: 'clamp(30px, 5vw, 60px) 0',
         position: 'relative',
         overflow: 'hidden',
         minHeight: '100vh',
-        maxHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center'
@@ -51,28 +50,28 @@ const MomentumStats = () => {
         pointerEvents: 'none'
       }} />
       
-      <div className="wrap" style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+      <div className="wrap" style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start' }}>
         <div className="content-wrapper" style={{ 
           display: 'grid', 
           gridTemplateColumns: '1fr 1.5fr', 
-          gap: '60px',
+          gap: 'clamp(30px, 5vw, 60px)',
           alignItems: 'stretch',
           minHeight: 'auto',
-          maxHeight: 'calc(100vh - 160px)'
+          maxHeight: 'calc(100vh - clamp(100px, 15vw, 160px))'
         }}>
           <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-            <div className="momentum-header" style={{ marginBottom: '50px' }}>
+            <div className="momentum-header" style={{ marginBottom: 'clamp(30px, 5vw, 50px)' }}>
               <p className="eyebrow" style={{ 
                 color: '#0096B9', 
-                fontSize: '12px', 
+                fontSize: 'var(--font-size-xs)', 
                 fontWeight: '700', 
                 letterSpacing: '0.15em', 
                 textTransform: 'uppercase', 
-                marginBottom: '16px' 
+                marginBottom: 'clamp(12px, 2vw, 16px)' 
               }}>MEASURED IN MOMENTUM</p>
               <h2 style={{ 
                 color: '#12181c', 
-                fontSize: '48px', 
+                fontSize: 'var(--font-size-2xl)', 
                 fontWeight: '800', 
                 margin: '0', 
                 lineHeight: '1.1',
@@ -85,18 +84,18 @@ const MomentumStats = () => {
               <div className="stat-item" style={{ 
                 display: 'flex',
                 alignItems: 'center',
-                padding: '14px 16px',
+                padding: 'clamp(12px, 2vw, 18px) clamp(14px, 2.5vw, 20px)',
                 background: '#ffffff',
-                borderRadius: '12px',
+                borderRadius: 'clamp(8px, 1.5vw, 12px)',
                 boxShadow: '0 2px 8px rgba(0, 0, 0, 0.06)',
-                gap: '16px'
+                gap: 'clamp(12px, 2vw, 20px)'
               }}>
                 <div className="stat-number" style={{ 
-                  fontSize: '28px', 
+                  fontSize: 'var(--font-size-xl)', 
                   fontWeight: '800', 
                   color: '#0096B9', 
                   lineHeight: '1',
-                  minWidth: '80px',
+                  minWidth: 'clamp(50px, 8vw, 80px)',
                   textAlign: 'left'
                 }}>5,000+</div>
                 <div style={{ 
@@ -106,7 +105,7 @@ const MomentumStats = () => {
                   flexShrink: 0
                 }} />
                 <div className="stat-label" style={{ 
-                  fontSize: '11px', 
+                  fontSize: 'var(--font-size-xs)', 
                   color: '#5a6067', 
                   fontWeight: '600', 
                   lineHeight: '1.3',
@@ -119,18 +118,18 @@ const MomentumStats = () => {
               <div className="stat-item" style={{ 
                 display: 'flex',
                 alignItems: 'center',
-                padding: '14px 16px',
+                padding: 'clamp(12px, 2vw, 18px) clamp(14px, 2.5vw, 20px)',
                 background: '#ffffff',
-                borderRadius: '12px',
+                borderRadius: 'clamp(8px, 1.5vw, 12px)',
                 boxShadow: '0 2px 8px rgba(0, 0, 0, 0.06)',
-                gap: '16px'
+                gap: 'clamp(12px, 2vw, 20px)'
               }}>
                 <div className="stat-number" style={{ 
-                  fontSize: '28px', 
+                  fontSize: 'var(--font-size-xl)', 
                   fontWeight: '800', 
                   color: '#0096B9', 
                   lineHeight: '1',
-                  minWidth: '80px',
+                  minWidth: 'clamp(50px, 8vw, 80px)',
                   textAlign: 'left'
                 }}>20+</div>
                 <div style={{ 
@@ -140,7 +139,7 @@ const MomentumStats = () => {
                   flexShrink: 0
                 }} />
                 <div className="stat-label" style={{ 
-                  fontSize: '11px', 
+                  fontSize: 'var(--font-size-xs)', 
                   color: '#5a6067', 
                   fontWeight: '600', 
                   lineHeight: '1.3',
@@ -153,18 +152,18 @@ const MomentumStats = () => {
               <div className="stat-item" style={{ 
                 display: 'flex',
                 alignItems: 'center',
-                padding: '14px 16px',
+                padding: 'clamp(12px, 2vw, 18px) clamp(14px, 2.5vw, 20px)',
                 background: '#ffffff',
-                borderRadius: '12px',
+                borderRadius: 'clamp(8px, 1.5vw, 12px)',
                 boxShadow: '0 2px 8px rgba(0, 0, 0, 0.06)',
-                gap: '16px'
+                gap: 'clamp(12px, 2vw, 20px)'
               }}>
                 <div className="stat-number" style={{ 
-                  fontSize: '28px', 
+                  fontSize: 'var(--font-size-xl)', 
                   fontWeight: '800', 
                   color: '#0096B9', 
                   lineHeight: '1',
-                  minWidth: '80px',
+                  minWidth: 'clamp(50px, 8vw, 80px)',
                   textAlign: 'left'
                 }}>11+</div>
                 <div style={{ 
@@ -174,7 +173,7 @@ const MomentumStats = () => {
                   flexShrink: 0
                 }} />
                 <div className="stat-label" style={{ 
-                  fontSize: '11px', 
+                  fontSize: 'var(--font-size-xs)', 
                   color: '#5a6067', 
                   fontWeight: '600', 
                   lineHeight: '1.3',
@@ -187,18 +186,18 @@ const MomentumStats = () => {
               <div className="stat-item" style={{ 
                 display: 'flex',
                 alignItems: 'center',
-                padding: '14px 16px',
+                padding: 'clamp(12px, 2vw, 18px) clamp(14px, 2.5vw, 20px)',
                 background: '#ffffff',
-                borderRadius: '12px',
+                borderRadius: 'clamp(8px, 1.5vw, 12px)',
                 boxShadow: '0 2px 8px rgba(0, 0, 0, 0.06)',
-                gap: '16px'
+                gap: 'clamp(12px, 2vw, 20px)'
               }}>
                 <div className="stat-number" style={{ 
-                  fontSize: '28px', 
+                  fontSize: 'var(--font-size-xl)', 
                   fontWeight: '800', 
                   color: '#0096B9', 
                   lineHeight: '1',
-                  minWidth: '80px',
+                  minWidth: 'clamp(50px, 8vw, 80px)',
                   textAlign: 'left'
                 }}>100+</div>
                 <div style={{ 
@@ -208,7 +207,7 @@ const MomentumStats = () => {
                   flexShrink: 0
                 }} />
                 <div className="stat-label" style={{ 
-                  fontSize: '11px', 
+                  fontSize: 'var(--font-size-xs)', 
                   color: '#5a6067', 
                   fontWeight: '600', 
                   lineHeight: '1.3',
@@ -221,18 +220,18 @@ const MomentumStats = () => {
               <div className="stat-item" style={{ 
                 display: 'flex',
                 alignItems: 'center',
-                padding: '14px 16px',
+                padding: 'clamp(12px, 2vw, 18px) clamp(14px, 2.5vw, 20px)',
                 background: '#ffffff',
-                borderRadius: '12px',
+                borderRadius: 'clamp(8px, 1.5vw, 12px)',
                 boxShadow: '0 2px 8px rgba(0, 0, 0, 0.06)',
-                gap: '16px'
+                gap: 'clamp(12px, 2vw, 20px)'
               }}>
                 <div className="stat-number" style={{ 
-                  fontSize: '28px', 
+                  fontSize: 'var(--font-size-xl)', 
                   fontWeight: '800', 
                   color: '#0096B9', 
                   lineHeight: '1',
-                  minWidth: '80px',
+                  minWidth: 'clamp(50px, 8vw, 80px)',
                   textAlign: 'left'
                 }}>4+</div>
                 <div style={{ 
@@ -242,7 +241,7 @@ const MomentumStats = () => {
                   flexShrink: 0
                 }} />
                 <div className="stat-label" style={{ 
-                  fontSize: '11px', 
+                  fontSize: 'var(--font-size-xs)', 
                   color: '#5a6067', 
                   fontWeight: '600', 
                   lineHeight: '1.3',
@@ -260,7 +259,7 @@ const MomentumStats = () => {
             alignItems: 'stretch',
             position: 'relative',
             height: '100%',
-            marginTop: '40px'
+            marginTop: 'clamp(20px, 4vw, 40px)'
           }}>
             <div className="hero-card" style={{ 
               width: '100%', 

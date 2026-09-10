@@ -13,53 +13,15 @@ const Pathway = () => {
   ];
 
   const getIcon = (iconType) => {
-    switch(iconType) {
-      case 'chip':
-        return (
-          <svg viewBox="0 0 40 40">
-          </svg>
-        );
-      case 'robot':
-        return ;
-      case 'code':
-        return (
-          <svg viewBox="0 0 40 40">
-          </svg>
-        );
-      case 'search':
-        return ;
-         (
-          <svg viewBox="0 0 40 40">
-          </svg>
-        );
-      case 'upgrade':
-        return (
-          <svg viewBox="0 0 40 40">
-          </svg>
-        );
-      case 'trophy':
-        return (
-          <svg viewBox="0 0 40 40">
-          </svg>
-        );
-      case 'team':
-        return (
-          <svg viewBox="0 0 40 40">
-          </svg>
-        );
-      case 'medal':
-        return;
-      default:
-        return null;
-    }
+    return null;
   };
 
   return (
     <section className="roadmap-section" style={{ minHeight: '100vh', maxHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
       <div className="roadmap-container" style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
         <div className="hero">
-          <h1>FROM FIRST BUILD<br/>TO COMPETITION DAY.</h1>
-          <p className="hero-copy">
+          <h1 style={{ fontSize: 'var(--font-size-4xl)', fontWeight: '800', lineHeight: '1.1', color: '#12181c' }}>FROM FIRST BUILD<br/>TO COMPETITION DAY.</h1>
+          <p className="hero-copy" style={{ fontSize: 'var(--font-size-base)', lineHeight: '1.6', color: '#5a6067' }}>
             At Global Robotics Academy, the goal is simple —
             <strong>build students who can actually build and operate robots,
             not just follow a project manual.</strong>
@@ -76,12 +38,8 @@ const Pathway = () => {
               <div className="connector"></div>
               <div className="node"></div>
               <div className="card">
-                <div className="card-top">
-                  <div className="icon">{getIcon(milestone.icon)}</div>
-                </div>
-                <div className="small-line"></div>
-                <h2>{milestone.title}</h2>
-                <p>{milestone.description}</p>
+                <h2 style={{ fontSize: 'var(--font-size-sm)', fontWeight: '700', lineHeight: '1.3', color: '#12181c' }}>{milestone.title}</h2>
+                <p style={{ fontSize: 'var(--font-size-sm)', lineHeight: '1.4', color: '#5a6067' }}>{milestone.description}</p>
               </div>
             </div>
           ))}

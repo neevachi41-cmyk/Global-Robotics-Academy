@@ -35,12 +35,31 @@ const TeamAchievements = () => {
   ];
 
   return (
-    <section className="team-achievements" id="achievements">
-      <div className="wrap">
+    <section className="team-achievements" id="achievements" style={{ 
+      minHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      padding: 'clamp(30px, 5vw, 60px) 0'
+    }}>
+      <div className="wrap" style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
         <div className="achievements-header">
-          <p className="eyebrow">Team Achievements</p>
-          <h2>Our Track Record Speaks for Itself</h2>
-          <p className="lede">From local competitions to international stages, our teams consistently deliver excellence and innovation in robotics.</p>
+          <p className="eyebrow" style={{ 
+            color: '#0096B9',
+            fontSize: 'clamp(12px, 1.5vw, 14px)',
+            fontWeight: '700',
+            letterSpacing: '0.1em',
+            textTransform: 'uppercase',
+            marginBottom: 'clamp(16px, 2vw, 20px)'
+          }}>Team Achievements</p>
+          <h2 style={{ 
+            color: '#12181c',
+            fontSize: 'clamp(36px, 6vw, 72px)',
+            fontWeight: '800',
+            lineHeight: '1.1',
+            marginBottom: 'clamp(16px, 2.5vw, 24px)'
+          }}>Our Track Record Speaks for Itself</h2>
+          <p className="lede" style={{ fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.6', color: '#5a6067' }}>From local competitions to international stages, our teams consistently deliver excellence and innovation in robotics.</p>
         </div>
         <div className="achievements-grid">
           {achievements.map((achievement, index) => (

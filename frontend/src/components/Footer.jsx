@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="footer-logo">
             <img src="logo.png" alt="Global Robotics Academy" className="logo-image" />
           </div>
-          <p className="footer-tag">Build. Innovate. Compete. Go Global.</p>
+          <p className="footer-tag" style={{ fontSize: 'var(--font-size-sm)', lineHeight: '1.4', color: '#5a6067' }}>Build. Innovate. Compete. Go Global.</p>
           <div className="footer-contact">
             <p className="contact-item">+91 9922552891</p>
             <p className="contact-item">gra.stemsage@gmail.com</p>
@@ -17,7 +17,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-col">
-          <span className="eyebrow">Explore</span>
+          <span className="eyebrow" style={{ fontSize: 'var(--font-size-xs)', fontWeight: '700', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#0096B9', display: 'block', marginBottom: '12px' }}>Explore</span>
           <Link to="/about">About</Link>
           <Link to="/competitions">Competitions</Link>
           <Link to="/programs">Programs</Link>
@@ -26,7 +26,7 @@ const Footer = () => {
           <Link to="/partners">Schools &amp; Partners</Link>
         </div>
         <div className="footer-col">
-          <span className="eyebrow">Connect</span>
+          <span className="eyebrow" style={{ fontSize: 'var(--font-size-xs)', fontWeight: '700', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#0096B9', display: 'block', marginBottom: '12px' }}>Connect</span>
           <Link to="/gallery">Gallery</Link>
           <Link to="/videos">Videos</Link>
           <Link to="/contact">Contact</Link>

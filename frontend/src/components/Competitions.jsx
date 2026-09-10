@@ -48,10 +48,10 @@ const Competitions = ({ showAllCompetitions = false }) => {
       console.error('Error fetching competitions:', error);
       // Fallback to static data if API fails
       setCompetitions([
-        { name: 'School Robotics Championships', description: 'Competition preparation pathway for students and teams.', category: 'Robotics' },
-        { name: 'IRC League', description: 'Competition preparation pathway for students and teams.', category: 'Robotics' },
-        { name: 'Smart India Hackathon – Hardware Edition', description: 'Competition preparation pathway for students and teams.', category: 'Robotics' },
-        { name: 'ABU Robocon India', description: 'Competition preparation pathway for students and teams.', category: 'Robotics' },
+        { name: 'School Robotics Championships', description: 'Competition preparation pathway for students and teams.', category: 'Robotics', image: '/technoxian.jpg' },
+        { name: 'IRC League', description: 'Competition preparation pathway for students and teams.', category: 'Robotics', image: '/wro.png' },
+        { name: 'Smart India Hackathon – Hardware Edition', description: 'Competition preparation pathway for students and teams.', category: 'Robotics', image: '/Anvesh Bharat.jpg' },
+        { name: 'ABU Robocon India', description: 'Competition preparation pathway for students and teams.', category: 'Robotics', image: '/mekathlon.webp' },
         { name: 'e-Yantra Robotics Competition', description: 'Competition preparation pathway for students and teams.', category: 'Robotics' },
         { name: 'IIT Techfest Robotics Competition', description: 'Competition preparation pathway for students and teams.', category: 'Robotics' },
         { name: 'Anvesh Bharat', description: 'Competition preparation pathway for students and teams.', category: 'Robotics' },
@@ -61,15 +61,35 @@ const Competitions = ({ showAllCompetitions = false }) => {
   };
 
   return (
-    <section className="competitions" id="competitions">
-      <div className="wrap">
-        <div className="competitions-layout">
+    <section className="competitions" id="competitions" style={{ 
+      minHeight: '100vh',
+      maxHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      padding: '40px 0'
+    }}>
+      <div className="wrap" style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <div className="competitions-layout" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(30px, 5vw, 60px)', alignItems: 'center' }}>
           <div className="competitions-text">
-            <p className="eyebrow">Competition Directory</p>
-            <h2>Prepare for the Competitions That Matter.</h2>
+            <p className="eyebrow" style={{ 
+              color: '#0096B9',
+              fontSize: 'var(--font-size-xs)',
+              fontWeight: '700',
+              letterSpacing: '0.1em',
+              textTransform: 'uppercase',
+              marginBottom: 'clamp(16px, 2vw, 20px)'
+            }}>Competition Directory</p>
+            <h2 style={{ 
+              color: '#12181c',
+              fontSize: 'var(--font-size-4xl)',
+              fontWeight: '800',
+              lineHeight: '1.1',
+              marginBottom: 'clamp(16px, 2.5vw, 24px)'
+            }}>Prepare for the Competitions That Matter.</h2>
             {showAllCompetitions && (
               <>
-                <p className="lede">Competition availability, eligibility and participation depend on the respective competition's rules, age categories, selection process and registration requirements.</p>
+                <p className="lede" style={{ fontSize: 'var(--font-size-base)', lineHeight: '1.6', color: '#5a6067' }}>Competition availability, eligibility and participation depend on the respective competition's rules, age categories, selection process and registration requirements.</p>
               </>
             )}
           </div>
@@ -77,8 +97,22 @@ const Competitions = ({ showAllCompetitions = false }) => {
             <div className="comp-grid">
               {competitions.slice(0, showAllCompetitions ? competitions.length : 4).map((competition, index) => (
                 <div className={`comp-card ${visibleCards.has(index) ? 'visible' : ''}`} key={index} data-index={index}>
-                  <h4>{competition.name}</h4>
-                  <p>{competition.description}</p>
+                  {competition.image && (
+                    <img src={competition.image} alt={competition.name} style={{ 
+                      width: '100%',
+                      height: 'auto',
+                      borderRadius: '6px',
+                      objectFit: 'contain',
+                      marginBottom: '12px'
+                    }} />
+                  )}
+                  <h4 style={{ 
+                    color: '#12181c',
+                    fontSize: 'var(--font-size-sm)',
+                    fontWeight: '800',
+                    lineHeight: '1.2',
+                    marginBottom: '8px'
+                  }}>{competition.name}</h4>
                 </div>
               ))}
             </div>

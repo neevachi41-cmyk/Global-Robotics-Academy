@@ -47,12 +47,32 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact" id="contact">
-      <div className="wrap">
+    <section className="contact" id="contact" style={{ 
+      minHeight: '100vh',
+      maxHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      padding: '40px 0'
+    }}>
+      <div className="wrap" style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
         <div className="contact-form-container">
           <div className="form-header">
-            <p className="form-eyebrow">01 — 05</p>
-            <h2>START A CONVERSATION</h2>
+            <p className="form-eyebrow" style={{ 
+              color: '#0096B9',
+              fontSize: 'var(--font-size-xs)',
+              fontWeight: '700',
+              letterSpacing: '0.1em',
+              textTransform: 'uppercase',
+              marginBottom: 'clamp(16px, 2vw, 20px)'
+            }}>01 — 05</p>
+            <h2 style={{ 
+              color: '#12181c',
+              fontSize: 'var(--font-size-4xl)',
+              fontWeight: '800',
+              lineHeight: '1.1',
+              marginBottom: 'clamp(16px, 2.5vw, 24px)'
+            }}>START A CONVERSATION</h2>
           </div>
           
           <form className="contact-form" onSubmit={handleSubmit}>
